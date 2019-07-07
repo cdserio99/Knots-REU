@@ -1,3 +1,13 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{McC18}
+
+\bibitem[BM18]{baker-motegi}
+Kenneth~L. Baker and Kimihiko Motegi.
+\newblock Noncharacterizing slopes for hyperbolic knots.
+\newblock {\em Algebr. Geom. Topol.}, 18(3):1461--1480, 2018.
+
+\bibitem[McC18]{mccoy:hyperbolic}
+Duncan McCoy.
+\newblock On the characterising slopes of hyperbolic knots.
+\newblock Available as arXiv:1807.11099, August 2018.
 
 \end{thebibliography}
