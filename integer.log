@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.17)  12 JUL 2019 14:57
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.6.27)  12 JUL 2019 12:50
+>>>>>>> parent of 7da0a75... Removed false conjecture about TWDs, added thm about 8_1, made organizational changes
 entering extended mode
 **./integer.tex
 (integer.tex
@@ -792,14 +796,21 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
+<<<<<<< HEAD
 ) ABD: EveryShipout initializing macros [1{C:/Users/anton/AppData/Local/MiKTeX/
 2.9/pdftex/config/pdftex.map}] (integer.bbl [2]) [3]
+=======
+)
+ABD: EveryShipout initializing macros [1{C:/ProgramData/MiKTeX/2.9/pdftex/confi
+g/pdftex.map}] [2] (integer.bbl) [3]
+>>>>>>> parent of 7da0a75... Removed false conjecture about TWDs, added thm about 8_1, made organizational changes
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 148.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 148.
  (integer.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 148.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 148.
 Package rerunfilecheck Info: File `integer.out' has not changed.
+<<<<<<< HEAD
 (rerunfilecheck)             Checksum: F868C7BE34D3073B4EA1A43C61503114;928.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 148.
  ) 
@@ -830,4 +841,33 @@ PDF statistics:
  142 PDF objects out of 1000 (max. 8388607)
  26 named destinations out of 1000 (max. 500000)
  117 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+(rerunfilecheck)             Checksum: 0FC2789B4A25C9D7E83D3F1B6D22968A;847.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 148.
+ ) 
+Here is how much of TeX's memory you used:
+ 19215 strings out of 493320
+ 335125 string characters out of 3138925
+ 448464 words of memory out of 3000000
+ 22259 multiletter control sequences out of 15000+200000
+ 12952 words of font info for 51 fonts, out of 3000000 for 9000
+ 1302 hyphenation exceptions out of 8191
+ 55i,6n,54p,1451b,339s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on integer.pdf (3 pages, 176857 bytes).
+PDF statistics:
+ 139 PDF objects out of 1000 (max. 8388607)
+ 25 named destinations out of 1000 (max. 500000)
+ 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> parent of 7da0a75... Removed false conjecture about TWDs, added thm about 8_1, made organizational changes
 
