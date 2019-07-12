@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.6.27)  11 JUL 2019 16:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.6.27)  12 JUL 2019 12:50
 entering extended mode
 **./integer.tex
 (integer.tex
@@ -730,10 +730,10 @@ Package rerunfilecheck Info: File `integer.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 148.
  ) 
 Here is how much of TeX's memory you used:
- 19213 strings out of 493320
- 335080 string characters out of 3138925
- 448419 words of memory out of 3000000
- 22258 multiletter control sequences out of 15000+200000
+ 19215 strings out of 493320
+ 335125 string characters out of 3138925
+ 448464 words of memory out of 3000000
+ 22259 multiletter control sequences out of 15000+200000
  12952 words of font info for 51 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
  55i,6n,54p,1451b,339s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -748,9 +748,9 @@ msfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/P
 rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on integer.pdf (3 pages, 173471 bytes).
+Output written on integer.pdf (3 pages, 176857 bytes).
 PDF statistics:
- 137 PDF objects out of 1000 (max. 8388607)
- 24 named destinations out of 1000 (max. 500000)
+ 139 PDF objects out of 1000 (max. 8388607)
+ 25 named destinations out of 1000 (max. 500000)
  109 words of extra memory for PDF output out of 10000 (max. 10000000)
 
