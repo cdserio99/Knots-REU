@@ -115,7 +115,7 @@
 
 \subsection{Piccirillo's construction} We have the following theorem due to Piccirillo:
 
-\begin{theorem}
+\begin{theorem}[Piccirillo, 2018]
 	Let $L$ be a three-component link consisting of disjoint components $R$, $B$, and $G$, giving a surgery diagram such that
 	\begin{enumerate}
 		\item $R$ is a 0-framed unknot,
@@ -126,9 +126,9 @@
 
 \end{theorem}
 
-If $K$ is a knot with $u(K)=1$, then for any integer $n$, this construction yields another knot $K_n'$ (not necessarily distinct from $K$) with the same $n$-surgery as $K$. To see this, we begin with a banded Hopf link diagram for $K$. We then take a Hopf link with components $R$ and $B$, both with framings 0, and we handle slide $B$ over $R$ according to the band presentation for $K$. This produces a two-component link, with $B$ becoming $K$ and $R$ becoming a 0-framed unknot linked with $K$. We adjust the framing of $B$ to $n$. If we add a meridian $G$ to $R$ and slide $B$ back over $R$, then we obtain a diagram fitting into Picirillo's construction.
+If $K$ is a knot with $u(K)=1$, then for any integer $n$, this construction yields another knot $K_n'$ (not necessarily distinct from $K$) with the same $n$-surgery as $K$. To see this, we begin with a banded Hopf link diagram for $K$. We then take a Hopf link with components $R$ and $B$, both with framings 0, and we handle slide $B$ over $R$ according to the band presentation for $K$. This produces a two-component link, with $B$ becoming $K$ and $R$ becoming a 0-framed unknot $c$ linked with $K$. We adjust the framing of $B$ to $n$. If we add a meridian $G$ to $R$ and slide $B$ back over $R$, then we obtain a diagram fitting into Picirillo's construction.
 
-To obtain the knot $K_n'$, we begin with the two component link $B\cup R$ described above, where $B$ is $K$ with framing $n$ and $R$ is a 0-framed unknot. We add a 0-framed meridian $G$ to $K$, and we note that if $B$ has nonzero framing, then by a slam dunk, we can change the framing of $B$ to 0 if we add a meridian $c$ to $B$ with framing $-1/n$. We slide $B$ over $R$, and we isotope the diagram until $B$ and $R$ are both unknots which cross each other twice, i.e., $B$ and $R$ form a Hopf link if $G$ is removed. We then slide $G$ over $B$ until $G$ is no longer linked with $R$. At this stage, we can remove $R$ using a ``lightbulb trick." This leaves us with a two-component link $G\cup c$. The component $G$ is the knot $K_0'$ with the same 0-surgery as $K$. To obtain $K_n'$, we twist $K$ along $c$, $n$ times.
+To obtain the knot $K_n'$, we begin with the two component link $B\cup R$ described above, where $B$ is $K$ with framing $n$ and $R$ is a 0-framed unknot. We add a 0-framed meridian $G$ to $K$, and we note that if $B$ has nonzero framing, then by a slam dunk, we can change the framing of $B$ to 0 if we add a meridian $P$ to $B$ with framing $-1/n$. We slide $B$ over $R$, and we isotope the diagram until $B$ and $R$ are both unknots which cross each other twice, i.e., $B$ and $R$ form a Hopf link if $G$ is removed. We then slide $G$ over $B$ until $G$ is no longer linked with $R$. At this stage, we can remove $R$ using a ``lightbulb trick." This leaves us with a two-component link $G\cup P$. The component $G$ is the knot $K_0'$ with the same 0-surgery as $K$, and $P$ is an unknot $c'$ linked with $K_0'$. To obtain $K_n'$, we twist $K$ along $c'$, $n$ times.
 
 
 
@@ -138,7 +138,31 @@ To obtain the knot $K_n'$, we begin with the two component link $B\cup R$ descri
 
 \kh{[Recall Theorem~3.2 from KMS.]}
 
-\subsection{Proof of Theorem~\ref{thm:unknotting-one}}
+\subsection{Proof of Theorem~\ref{thm:unknotting-one}} To prove the theorem, we show that under the hypotheses on $K$, we have $K_n'\simeq K$ for at most finitely many $n$. If $K_n'\not\simeq K$ for all $n$, then $K$ has no integer characterizing slopes. If $K_N'\simeq K$ for some $N$, then we note that $K_n'$ is obtained by twisting $K$ through the unknot $c$, $n-N$ times. Moreover, $c$ is not a meridian to $K_N'$ if and only if it is not a meridian to $K_0'$. To see this, note that if $c$ is a meridian to $K_0'$, then twisting through $c$ does not change $K_0'$; hence $K_0'\simeq K_N'$, and $c$ is not a meridian to $K_N'$. The converse follows by interchanging $K_0'$ and $K_N'$. It remains to show that $c'$ is not a meridian to $K_0'$, for then the result of Kouno, Motegi, and Shibuya \cite[Theorem 3.2]{twisting-knot-types} described in 2.3 applies to the twist family $\{K_n'\}$ to show that $K_n'\simeq K_N'\simeq K$ for at most finitely many $n$. 
+
+Recall from 2.1 that since $K$ is not a twisted Whitehead double, in any band presentation for $K$, the band must cross one component of the Hopf link. The following lemma then proves that in the link $K\cup c$ appearing in Piccirillo's construction, the unknot $c$ is not a meridian to $K$.
+
+\begin{lemma}
+	Let $R\cup B$ be a Hopf link, and consider a handle slide of $R$ over $B$ which leaves $R$ a meridian to $B$. Then there is an equivalent handle slide of $R$ over $B$ along a band which does not cross either $R$ or $B$.
+\end{lemma}
+\begin{proof}
+	TBD
+\end{proof}
+
+We now appeal to a lemma of Baker and Motegi \cite[Lemma 2.4]{baker-motegi}, with notation adapted:
+
+\begin{lemma}[Baker-Motegi, 2018]
+	Let $K_0'\cup c'$ be a two-component link in $S^3$ such that $c'$ is a meridian of $K_0'$. Then $(0,0)$-surgery on $K_0'\cup c'$ results in $S^3$ with its surgery dual link $c\cup K$, for which $c$ is a meridian to $K$.
+\end{lemma}
+
+\begin{corollary}
+	If $c$ is not a meridian to $K$, then $c'$ is not a meridian to $K_0'$.
+\end{corollary}
+
+\begin{proof}
+	We know that $c'$ and $K_0'$ are surgery duals to $K$ and $c$ respectively. Show that it follows that $c$ and $K$ are dual to $K_0'$ and $c'$ respectively.
+\end{proof}
+This completes the proof of the theorem.
 
 \section{Knots with low crossing number}
 
