@@ -136,7 +136,17 @@ To obtain the knot $K_n'$, we begin with the two component link $B\cup R$ descri
 
 \kh{[Define what it means to produce a twist family of knots $K_n$ from a two-component link $K\cup C$ where $C$ is an unknot that is linked with $K$. A picture would help.]}
 
+Let K be an unoriented smooth knot in the oriented 3-sphere $S^3$ and V a solid torus with a preferred framing that contains K in its interior. Define an orientation-preserving homeomorphism $f_n$ of V s.t. $f_n$(m)=m and  $f_n$(l)=l+nm in $H_1(\partial V)$ where (m, l) is a preferred meridian-longitude pair of V. Call $f_n$ a twisting homeomorphism, which defines the new knot $f_n(K)$ in $S^3$ and thus a twisting operation on K. Write $K_{V,n} := f_n(K)$.
+
+From a two-component link $K\cup C$ where C is an unknot that is linked with K, we can get the new knot $K_n := K_{V,n}$ where $K_{V,n}$ is with respect to C as the preferred meridian of a solid torus V containing K in its interior (i.e. we obtain $K_n$ from $K\cup C$ by twisting n times along C for K $\subset$ int(V) with V a solid torus with meridian C). A twist family of knots, $K_A := \{K_n | n \in A\}$ where A some index set. Note that $\forall m, n \in A$,  $K_m$ is obtained from $K_n$ by a (m-n)-twist of V by Remark 2.2 in "Twisting and Knot Types (Kouno, Morel and Shibuya)".  
+
 \kh{[Recall Theorem~3.2 from KMS.]}
+\begin{theorem}\label{Thm} Let K be a knot in $S^3$ and V an unknotted solid torus containing K with $w_V(K) \ge 2$. Then there are at most finitely many integers $n_i$ such that $K_{V, n_i}\sim K$. 
+
+\end{theorem}
+
+
+
 
 \subsection{Proof of Theorem~\ref{thm:unknotting-one}} To prove the theorem, we show that under the hypotheses on $K$, we have $K_n'\simeq K$ for at most finitely many $n$. If $K_n'\not\simeq K$ for all $n$, then $K$ has no integer characterizing slopes. If $K_N'\simeq K$ for some $N$, then we note that $K_n'$ is obtained by twisting $K$ through the unknot $c$, $n-N$ times. Moreover, $c$ is not a meridian to $K_N'$ if and only if it is not a meridian to $K_0'$. To see this, note that if $c$ is a meridian to $K_0'$, then twisting through $c$ does not change $K_0'$; hence $K_0'\simeq K_N'$, and $c$ is not a meridian to $K_N'$. The converse follows by interchanging $K_0'$ and $K_N'$. It remains to show that $c'$ is not a meridian to $K_0'$, for then the result of Kouno, Motegi, and Shibuya \cite[Theorem 3.2]{twisting-knot-types} described in 2.3 applies to the twist family $\{K_n'\}$ to show that $K_n'\simeq K_N'\simeq K$ for at most finitely many $n$. 
 
