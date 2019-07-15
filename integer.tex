@@ -87,7 +87,7 @@
 \begin{enumerate}[label=\normalfont \bf (\alph*)]
 \item If $K$ has unknotting number $u(K)=1$ and $K$ is not a twist knot, then $K$ has at most one integer characterizing slope.
 \item If $K$ is one of the knots $8_4$, $8_6$, $8_{10}$, or $8_{12}$, then $K$ has $u(K)>1$ and has no integer characterizing slopes.
-\item Every nonzero integer surgery on the twist knot $8_1$ is non-characterizing.
+\item For the twist knot $8_1$, every nonzero integer is a non-characterizing slope.
 \end{enumerate}
 \end{theorem}
 
@@ -113,7 +113,24 @@
 
 \subsection{Banded Hopf link diagrams} \kh{[Describe these and how they produce diagrams that fit into Piccirillo's construction. Give examples for a couple knots with unknotting number one, plus an example for a knot with unknotting number two.]}
 
-\subsection{Piccirillo's construction}
+\subsection{Piccirillo's construction} We have the following theorem due to Piccirillo:
+
+\begin{theorem}
+	Let $L$ be a three-component link consisting of disjoint components $R$, $B$, and $G$, giving a surgery diagram such that
+	\begin{enumerate}
+		\item $R$ is a 0-framed unknot,
+		\item $B$ and $G$ have integral framings,
+		\item If we remove $G$ (resp. $B$), then $R$ is isotopic to a meridian to $B$ (resp. $G$).
+	\end{enumerate}
+	Let $Y$ be the 3-manifold given by surgery on $L$. Then for any $n\in\mathbb{Z}$, there are knots $K,K'\subset S^3$ such that $Y\cong S_n^3(K)\cong S_n^3(K')$.
+
+\end{theorem}
+
+If $K$ is a knot with $u(K)=1$, then for any integer $n$, this construction yields another knot $K_n'$ (not necessarily distinct from $K$) with the same $n$-surgery as $K$. To see this, we begin with a banded Hopf link diagram for $K$. We then take a Hopf link with components $R$ and $B$, both with framings 0, and we handle slide $B$ over $R$ according to the band presentation for $K$. This produces a two-component link, with $B$ becoming $K$ and $R$ becoming a 0-framed unknot linked with $K$. We adjust the framing of $B$ to $n$. If we add a meridian $G$ to $R$ and slide $B$ back over $R$, then we obtain a diagram fitting into Picirillo's construction.
+
+To obtain the knot $K_n'$, we begin with the two component link $B\cup R$ described above, where $B$ is $K$ with framing $n$ and $R$ is a 0-framed unknot. We add a 0-framed meridian $G$ to $K$, and we note that if $B$ has nonzero framing, then by a slam dunk, we can change the framing of $B$ to 0 if we add a meridian $c$ to $B$ with framing $-1/n$. We slide $B$ over $R$, and we isotope the diagram until $B$ and $R$ are both unknots which cross each other twice, i.e., $B$ and $R$ form a Hopf link if $G$ is removed. We then slide $G$ over $B$ until $G$ is no longer linked with $R$. At this stage, we can remove $R$ using a ``lightbulb trick." This leaves us with a two-component link $G\cup c$. The component $G$ is the knot $K_0'$ with the same 0-surgery as $K$. To obtain $K_n'$, we twist $K$ along $c$, $n$ times.
+
+
 
 \subsection{Twist families of knots}
 
@@ -125,6 +142,7 @@
 
 \section{Knots with low crossing number}
 
+\subsection{Possible extensions of Theorem 1.1} \kh{[Note that $u(K)=1$ is not necessary for Piccirillo's construction. We only need to be able to produce a link $R\cup B$ (with $B\simeq K$ and $R$ an unknot) from handle slides on a Hopf link. Explain this procedure for knots with $u(K)>1$.]}
 
 \subsection{Hyperbolic Dehn surgery} \kh{[Recall and discuss the relevant theorems used in our approach.]}
 
