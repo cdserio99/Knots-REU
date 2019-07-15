@@ -75,37 +75,33 @@
 
 \kh{[Introduction with some motivation and introduction of terms like ``characterizing slopes''. See the papers by Yi and Zhang and by McCoy and by Lackenby on characterizing slopes for ideas to steal. Mention Piccirillo's results for unknotting number one and using this to show that the Conway knot isn't slice. Mention that McCoy's work \cite{mccoy:hyperbolic}, which shows that a hyperbolic knot has only finitely many non-characterizing slopes $p/q$ with $|q| \geq 3$. In a sense, this implies that ``most'' slopes $p/q$ are characterizing for any given hyperbolic knot $K$: The  probability that a randomly chosen slope $p/q$ is characterizing approaches 1 as $|p|+|q|\to \infty$.]}
 
-
 \begin{theorem}\label{thm:unknotting-one} If a knot $K$ has unknotting number one and is not a twisted Whitehead double, then $K$ has at most finitely many integer characterizing slopes.
 \end{theorem}
 
-
-\kh{[Mention the following findings for knots with low crossing number. Also mention that it shows that having at most finitely many integer characterizing slopes is not special to knots with unknotting number one.]}
-
+We worked our way towards Theorem ~\ref{thm:unknotting-one} by manually finding knots $K_{n}'$ with equal $n-$ surgery as an unknotting number $u(K)=1$ knot $K$. Beginning with this process, we found the following result for knots with low crossing number:
 
 \begin{theorem}\label{thm:low-crossing} For knots $K$ with crossing number $c(K) \leq 10$:
-\begin{enumerate}[label=\normalfont \bf (\alph*)]
-\item If $K$ has unknotting number $u(K)=1$ and $K$ is not a twist knot, then $K$ has at most one integer characterizing slope.
-\item If $K$ is one of the knots $8_4$, $8_6$, $8_{10}$, or $8_{12}$, then $K$ has $u(K)>1$ and has no integer characterizing slopes.
-\item For the twist knot $8_1$, every nonzero integer is a non-characterizing slope.
-\end{enumerate}
+	\begin{enumerate}[label=\normalfont \bf (\alph*)]
+		\item If $K$ has unknotting number $u(K)=1$ and $K$ is not a twist knot, then $K$ has at most one integer characterizing slope, namely $\pm 2$.
+		\item If $K$ is one of the knots $8_4$, $8_6$, $8_{10}$, or $8_{12}$, then $K$ has $u(K)>1$ and has no integer characterizing slopes.
+		\item If $K$ is the twist knot $8_1$, then $K$ has at most one integer characterizing slope, namely $0$.
+	\end{enumerate}
 \end{theorem}
 
-\kh{[Can we push this to $c(K)\leq 12$? Can we expand on the list of knots with $u(K)>1$?]} 
-\kh{[Mention that these results affirmatively answer a question of Baker and Motegi \cite[Question~1.7]{baker-motegi}, who asked if there exist knots with fewer than 8 crossings that have infinitely many noncharacterizing slopes.]}
-\kh{[Part (c) shows that the hypothesis in Theorem 1.1 that $K$ is not a TWD is not necessary. Can we extend this result to other twist knots?]}
+This theorem specifies the number of integer characterizing slopes for several knots with $c(K) \leq 10$. It is possible that the bound on $c(K)$ can be increased, especially for knots with unknotting number $u(K) = 1$. Similarly, the list in part (b) can probably be expanded, encompassing every knot that fits Piccirilo's construction. Part (c) of this theorem also suggests that the assumption in Theorem ~\ref{thm:unknotting-one} that $K$ is not a Twisted Whitehead Double might not be necessary. But it was proven \kh{by Ozsváth and Szabó 2006, maybe cite}  that every slope is characterizing for $K$ the trefoil and the figure-eight knots, so we should expect part (c) to possibly hold only for twist knots with $n$ twists where $n$ is sufficiently large. Theorem~\ref{thm:low-crossing} affirmatively answers a question proposed in Baker and Motegi:
 
+\begin{question}
+	Are there any knots of crossing number less than 8 that have infinitely many noncharacterizing slopes? \cite[Question~1.7]{baker-motegi}
+\end{question}
 
+The proof of this theorem relies in part on a computer program to calculate volumes of finitely many surgeries on each knot. The script used is included on \kh{maybe put on Appendix?}, and the files produced for all knots encompassed can be found on \kh{Kyle's website}.
 
-
-
-\subsection{Non-characterizing slopes and dual knots} Let $Y$ be a 3-manifold given by $p/q$-surgery on a knot $K\subset S^3$. Then $Y$ is obtained by thickening $K$ to a solid torus $N(K)$, removing the interior of $N(K)$ from $S^3$, and gluing a solid torus back into $S^3\setminus\mathrm{int}(N(K))$ in a different manner. Note that $K$ is the core of the solid torus $N(K)$, i.e., $K$ is identified with $S^1\times\{0\}$ under the diffeomorphism between $N(K)$ and $S^1\times D^2$. The core of the new solid torus that is glued into $S^3\setminus\mathrm{int}(N(K))$ specifies a knot $\gamma$ in $Y$, which we call the \textit{surgery dual} of $K$. In a surgery diagram for $Y$, $\gamma$ can be represented by a meridian to $K$. If $K'\subset S^3$ is another knot which yields the same $p/q$-surgery as $K$, then one can ask how the surgery dual $\gamma'$ of $K'$ in $Y$ is related to $\gamma$. 
+\subsection{Surgery duals} Let $Y$ be a 3-manifold given by $p/q$-surgery on a knot $K\subset S^3$. Then $Y$ is obtained by thickening $K$ to a solid torus $N(K)$, removing the interior of $N(K)$ from $S^3$, and gluing a solid torus back into $S^3\setminus\mathrm{int}(N(K))$ in a different manner. Note that $K$ is the core of the solid torus $N(K)$, i.e., $K$ is identified with $S^1\times\{0\}$ under the diffeomorphism between $N(K)$ and $S^1\times D^2$. The core of the new solid torus that is glued into $S^3\setminus\mathrm{int}(N(K))$ specifies a knot $\gamma$ in $Y$, which we call the \textit{surgery dual} of $K$. In a surgery diagram for $Y$, $\gamma$ can be represented by a meridian to $K$. If $K'\subset S^3$ is another knot which yields the same $p/q$-surgery as $K$, then one can ask how the surgery dual $\gamma'$ of $K'$ in $Y$ is related to $\gamma$. 
 
 \begin{conjecture}[Baker] If $K$ and $K'$ are non-isotopic knots in $S^3$ which yield the same $3$-manifold $Y$ under $p/q$-surgery, then their surgery duals $\gamma$ and $\gamma'$ in $Y$ are not homotopic.
 \end{conjecture}
 
-\subsection{Code and data} \kh{[Summarize how computer calculations factor into the proof of Theorem~\ref{thm:low-crossing} and the results on Baker's conjecture. Ultimately, we'll make the files publicly available, and this subsection can describe where to find those files.]} \kh{[Also, we can probably get Gabriel's python script to work for any link that fits into Piccirillo's construction. That would be useful.]}
-
+We showed that Baker's conjecture holds for all knots $K$ with unknotting number $u(K) = 1$ and crossing number $c(K) \leq 10$. The files corresponding to this verification can be found on \kh{Kyle's website}.
 
 
 \section{Knots with unknotting number one}\label{sec:unknotting-one}
