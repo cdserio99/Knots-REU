@@ -88,13 +88,26 @@ We worked our way towards Theorem ~\ref{thm:unknotting-one} by manually finding 
 	\end{enumerate}
 \end{theorem}
 
-This theorem specifies the number of integer characterizing slopes for several knots with $c(K) \leq 10$. It is possible that the bound on $c(K)$ can be increased, especially for knots with unknotting number $u(K) = 1$. Similarly, the list in part (b) can probably be expanded, encompassing every knot that fits Piccirilo's construction. Part (c) of this theorem also suggests that the assumption in Theorem ~\ref{thm:unknotting-one} that $K$ is not a Twisted Whitehead Double might not be necessary. But it was proven \kh{by Ozsváth and Szabó 2006, maybe cite}  that every slope is characterizing for $K$ the trefoil and the figure-eight knots, so we should expect part (c) to possibly hold only for twist knots with $n$ twists where $n$ is sufficiently large. Theorem~\ref{thm:low-crossing} affirmatively answers a question proposed in Baker and Motegi:
+This theorem specifies the number of integer characterizing slopes for several knots with $c(K) \leq 10$. It is possible that the bound on $c(K)$ can be increased, especially for knots with unknotting number $u(K) = 1$. Similarly, the list in part (b) can probably be expanded, encompassing every knot that fits Piccirilo's construction. Part (c) of this theorem also suggests that the assumption in Theorem ~\ref{thm:unknotting-one} that $K$ is not a Twisted Whitehead Double might not be necessary. But it was proven \kh{by Ozsváth and Szabó 2006, maybe cite}  that every slope is characterizing for $K$ the trefoil and the figure-eight knots, so we should expect part (c) to possibly hold only for twist knots with $n$ twists where $n$ is sufficiently large.
+
+Theorem~\ref{thm:low-crossing} affirmatively answers a question proposed in Baker and Motegi:
 
 \begin{question}
 	Are there any knots of crossing number less than 8 that have infinitely many noncharacterizing slopes? \cite[Question~1.7]{baker-motegi}
 \end{question}
 
-The proof of this theorem relies in part on a computer program to calculate volumes of finitely many surgeries on each knot. The script used is included on \kh{maybe put on Appendix?}, and the files produced for all knots encompassed can be found on \kh{Kyle's website}.
+\begin{corollary}
+	All knots of crossing number less than 8 with unknotting number $u(K) = 1$ which are not twist knots have infinitely many noncharacterizing slopes.
+\end{corollary}
+
+The proof of this theorem relies in part on a computer program to calculate volumes of finitely many surgeries on each knot. We use the software SnapPy, which can triangulate hyperbolic manifolds. The script used is included on \kh{maybe put on Appendix?}, and the files produced for all knots encompassed can be found on \kh{Kyle's website}.
+
+\subsection{Surgery duals} Let $Y$ be a 3-manifold given by $p/q$-surgery on a knot $K\subset S^3$. Then $Y$ is obtained by thickening $K$ to a solid torus $N(K)$, removing the interior of $N(K)$ from $S^3$, and gluing a solid torus back into $S^3\setminus\mathrm{int}(N(K))$ in a different manner. Note that $K$ is the core of the solid torus $N(K)$, i.e., $K$ is identified with $S^1\times\{0\}$ under the diffeomorphism between $N(K)$ and $S^1\times D^2$. The core of the new solid torus that is glued into $S^3\setminus\mathrm{int}(N(K))$ specifies a knot $\gamma$ in $Y$, which we call the \textit{surgery dual} of $K$. In a surgery diagram for $Y$, $\gamma$ can be represented by a meridian to $K$. If $K'\subset S^3$ is another knot which yields the same $p/q$-surgery as $K$, then one can ask how the surgery dual $\gamma'$ of $K'$ in $Y$ is related to $\gamma$. 
+
+\begin{conjecture}[Baker] If $K$ and $K'$ are non-isotopic knots in $S^3$ which yield the same $3$-manifold $Y$ under $p/q$-surgery, then their surgery duals $\gamma$ and $\gamma'$ in $Y$ are not homotopic.
+\end{conjecture}
+
+We showed that Baker's conjecture holds for all knots $K$ with unknotting number $u(K) = 1$ and crossing number $c(K) \leq 10$ in the case of zero surgery. The files corresponding to this verification can be found on \kh{Kyle's website}.
 
 \subsection{Surgery duals} Let $Y$ be a 3-manifold given by $p/q$-surgery on a knot $K\subset S^3$. Then $Y$ is obtained by thickening $K$ to a solid torus $N(K)$, removing the interior of $N(K)$ from $S^3$, and gluing a solid torus back into $S^3\setminus\mathrm{int}(N(K))$ in a different manner. Note that $K$ is the core of the solid torus $N(K)$, i.e., $K$ is identified with $S^1\times\{0\}$ under the diffeomorphism between $N(K)$ and $S^1\times D^2$. The core of the new solid torus that is glued into $S^3\setminus\mathrm{int}(N(K))$ specifies a knot $\gamma$ in $Y$, which we call the \textit{surgery dual} of $K$. In a surgery diagram for $Y$, $\gamma$ can be represented by a meridian to $K$. If $K'\subset S^3$ is another knot which yields the same $p/q$-surgery as $K$, then one can ask how the surgery dual $\gamma'$ of $K'$ in $Y$ is related to $\gamma$. 
 
@@ -175,7 +188,39 @@ This completes the proof of the theorem.
 
 \subsection{Proof of Theorem~\ref{thm:low-crossing}}
 
-\kh{[Desribe the two-part algorithm we use to rule out integer characterizing slopes, beginning with finding $N \in \zz_{>0}$ such that $\vol(S^3 \setminus K'_n)> \vol(S^3 \setminus K)$ for all $|n|>N$ and then directly examining $K'_n$ for $|n| \leq N$.]}
+To prove Theorem~\ref{thm:low-crossing}, we need to rule out infinitely many characterizing slopes for each of the knots $K$ we are interested in. In general, this is a two-part algorithm:
+
+\begin{enumerate}
+	\item We use the theorems of hyperbolic Dehn surgery to find a bound $N \in \zz_{>0}$ such that any slope $n \in \zz$ is not characterizing if $|n|>N$.
+	\item For the $2 N + 1$ remaining cases, we directly examine a knot $K_{n}'$ with the same $n$-surgery as $K$. If $K_{n}' \neq K$, we know that $n$ is noncharacterizing.
+\end{enumerate}
+
+\kh{[First part, based on hyperbolic Dehn surgery theorems. Explain how we found N.]}
+
+This is a tedious computational problem. It was convenient for us to let a computer program run this proof. The algorithm executes the following steps:
+
+\begin{enumerate}
+	\item From the DT code of a link 
+	$L = K \cup B \cup c$ fitting the description \kh{above}, the program writes the file "[INFO]K.py" asking for the volume ... [\kh{depends on above}].
+	\item SnapPy opens, runs, and saves this file, producing a first output file named "[OUT][INFO]K.py".
+	\item  The program extracts this information and calculates the bound $N$ described above.
+	\item The program writes the file "[TEST]K.py" asking for the volume of the knot with the same $n$-surgery than  $K$ for all $n$ such that $|n| \leq N$.
+	\item SnapPy opens, runs, and saves this file, producing a second output file named "[OUT][TEST]K.py".
+	\item If the user asked for it, the program verifies if this last file contains all $2 N + 1$ cases. Because the run time in SnapPy is sometimes unpredictable, this step is recommended although the proof may be faster without it.
+	\item The program identifies the manifolds whose volume is less than or equal (up to approximations) the exterior of the knot $K$. Those cases are singled out in the output file.
+\end{enumerate}
+
+All files corresponding to the knots listed in Theorem ~\ref{thm:low-crossing} can be found on \kh{Kyle's website}. These files prove the theorem
+
+\begin{proof}
+	\begin{enumerate}[label=\normalfont \bf (\alph*)]
+		\item For all knots $K$ of crossing number at most 10 with unknotting number $u(K) = 1$ and not twist knots, the program indicates that only $n = 2$ or $n = -2$ could be characterizing.
+		\kh{\item For $K$ one of the knots $8_4$, $8_6$, $8_{10}$, or $8_{12}$, the program indicates that all knots $K_{n}'$ have different volume than $K$, so no integral slopes can be characterizing.
+			\item For the knot $8_1$, the program indicates that only $n = 0$ could be characterizing.}
+	\end{enumerate}
+\end{proof}
+
+\kh{[I have not written much of the math behind it (like defining the manifold Z, dehniflling the one-hlde in X, etc) because I want to see the notation Anton uses for the previous part.]}
 
 \section{Additional results}
 
