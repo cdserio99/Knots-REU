@@ -122,7 +122,7 @@ To find the banded Hopf link diagram for a knot $K$ with unknotting number one, 
 
 We now present a characterization of twisted Whitehead double knots in terms of their band presentations:
 
-\begin{theorem} A knot $K$ is a twisted Whitehead double if and only if $K$ has a band presentation in which the band does not cross either component of the Hopf link.
+\begin{theorem}\label{thm:twd} A knot $K$ is a twisted Whitehead double if and only if $K$ has a band presentation in which the band does not cross either component of the Hopf link.
 \end{theorem}
 \begin{proof}
 	\kh{[Is a proof necessary here? Can we find a resource?]}
@@ -159,7 +159,7 @@ Kouno, Motegi, and Shibuya prove a theorem regarding twist families \cite[Theore
 
 \subsection{Proof of Theorem~\ref{thm:unknotting-one}} We show that under the hypotheses on $K$, $K_n'\simeq K$ for at most finitely many $n$. If $K_n'\not\simeq K$ for all $n$, the conclusion holds. If $K_N'\simeq K$ for some $N$, then we note that $K_n'$ is obtained from an $(n-N)$-twist of $K$ through the unknot $c$. Moreover, $c$ is not a meridian to $K_N'$ if it is not a meridian to $K_0'$. To see this, note that if $c$ is a meridian to $K_0'$, then twisting through $c$ does not change $K_0'$; hence $K_0'\simeq K_N'$, and $c$ is not a meridian to $K_N'$. It remains to show that $c'$ is not a meridian to $K_0'$, for then Theorem 2.2 applies to the twist family $\{K_n'\}$ to show that $K_n'\simeq K_N'\simeq K$ for at most finitely many $n$. 
 
-Recall from 2.1 that since $K$ is not a twisted Whitehead double, in any band presentation for $K$, the band must cross one component of the Hopf link. The following lemma therefore proves that in the link $K\cup c$ appearing in Piccirillo's construction, the unknot $c$ is not a meridian to $K$.
+Recall from Theorem~\ref{thm:twd} that since $K$ is not a twisted Whitehead double, in any band presentation for $K$, the band must cross one component of the Hopf link. The following lemma therefore proves that in the link $K\cup c$ appearing in Piccirillo's construction, the unknot $c$ is not a meridian to $K$.
 
 \begin{lemma}
 	Let $R\cup B$ be a Hopf link, and consider a handle slide of $R$ over $B$ which leaves $R$ a meridian to $B$. Then there is an equivalent handle slide of $R$ over $B$ along a band which does not cross either $R$ or $B$.
