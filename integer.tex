@@ -113,38 +113,31 @@ We showed that Baker's conjecture holds for all knots $K$ with unknotting number
 \section{Knots with unknotting number one}\label{sec:unknotting-one}
 
 
-\subsection{Banded Hopf link diagrams} We want to introduce the banded Hopf link diagrams for knots. And we have the following theorem for knots with unknotting number one:
+\subsection{Banded Hopf link diagrams} Knots with unknotting number one can be represented by diagrams consisting of a Hopf link with its two components connected by a band. We have the following theorem:
 
 \begin {theorem} If $K$ has unknotting number one, then it is obtained from the Hopf link by a single band move.
 \end{theorem}
-\begin{proof} 
-Let $C$ denote the unknotting crossing in $K$. Then changing this crossing as below $K$ turns into the unknot:(figure needed)
 
-It follows that we can get a diagram of the Hopf link by adding a meridional unknot after the change:(figure needed)
- 
-Now we get $K$ back with a band move:(figure needed)
- 
- \end{proof}
+To find the banded Hopf link diagram for a knot $K$ with unknotting number one, we first find the unkotting crossing of $K$ and alternate this crossing. We then draw a meridian adjacent to this crossing and handle slide $K$ over the meridian. After simplification, we obtain the banded Hopf link diagram for knot $K$. \kh{[Figure needed]}
 
-Hence, every knot $K$ with unknotting number one can be produced by a Hopf link with a single band move.
+We now present a characterization of twisted Whitehead double knots in terms of their band presentations:
 
-To find the banded Hopf link diagram for a knot $K$ with unknotting number one, we first find the crossing by alternating which we can make $K$ into an unknot. After this alteration, we draw a meridian aside this crossing and make a handle slide from $K$ to the meridian. After several simplifying steps, we get the banded Hopf link diagram for knot $K$.(figure needed)
-
-We now introduce a fact of twisted whitehead double here, which uses the banded Hopf link diagram of $K$.
-
-\begin{corollary} [twisted whitehead double]If $K$ has a band presentation where the band does not pass through either component of the Hopf link, then K is a twisted whitehead double.
-\end{corollary}
+\begin{theorem} A knot $K$ is a twisted Whitehead double if and only if $K$ has a band presentation in which the band does not cross either component of the Hopf link.
+\end{theorem}
+\begin{proof}
+	\kh{[Is a proof necessary here? Can we find a resource?]}
+\end{proof}
 
 \subsection{Piccirillo's construction} We have the following theorem due to Piccirillo:
 
 \begin{theorem}[Piccirillo, 2018]
 	Let $L$ be a three-component link consisting of disjoint components $R$, $B$, and $G$, giving a surgery diagram such that
-	\begin{enumerate}
+	\begin{enumerate}[label=\normalfont (\alph*)]
 		\item $R$ is a 0-framed unknot,
 		\item $B$ and $G$ have integral framings,
 		\item If we remove $G$ (resp. $B$), then $R$ is isotopic to a meridian to $B$ (resp. $G$).
 	\end{enumerate}
-	Let $Y$ be the 3-manifold given by surgery on $L$. Then for any $n\in\mathbb{Z}$, there are knots $K,K'\subset S^3$ such that $Y\cong S_n^3(K)\cong S_n^3(K')$.
+	Let $Y$ be the $3$-manifold given by surgery on $L$. Then for any $n\in\mathbb{Z}$, there are knots $K,K'\subset S^3$ such that $Y\cong S_n^3(K)\cong S_n^3(K')$.
 
 \end{theorem}
 
@@ -236,7 +229,7 @@ The script \texttt{integral\char`_slopes.py}, given the DT code of a link $L$ sa
 All files corresponding to the knots listed in Theorem~\ref{thm:low-crossing} can be found on \kh{Kyle's website}. These files prove the theorem.
 
 \begin{proof} We produced the link $L$ aforementioned for all knots $K$ mentioned in Theorem~\ref{thm:low-crossing}. All the DT codes are included in the file \texttt{DT\char`_List.txt}, which is correctly formatted for the script \texttt{integral\char`_slopes.py}. Running it outputs the \texttt{.py} files labeled \texttt{[OUT]}, and text that is reproduced in the file \texttt{results.txt}. From reading this file, we see that:
-	\begin{enumerate}[label=\normalfont \bf (\alph*)]
+	\begin{enumerate}[label=\normalfont (\alph*)]
 		\item For all knots $K$ of crossing number at most 10 with unknotting number $u(K) = 1$ and not twist knots, the program indicates that only $n = 2$ or $n = -2$ could be characterizing.
 		\kh{\item For $K$ one of the knots $8_4$, $8_6$, $8_{10}$, or $8_{12}$, the program indicates that all knots $K_{n}'$ have different volume than $K$, so no integral slopes can be characterizing.}
 		\item For the knot $8_1$, the program indicates that only $n = 0$ could be characterizing.
