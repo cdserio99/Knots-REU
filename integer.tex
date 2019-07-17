@@ -75,10 +75,10 @@
 
 \kh{[Introduction with some motivation and introduction of terms like ``characterizing slopes''. See the papers by Yi and Zhang and by McCoy and by Lackenby on characterizing slopes for ideas to steal. Mention Piccirillo's results for unknotting number one and using this to show that the Conway knot isn't slice. Mention that McCoy's work \cite{mccoy:hyperbolic}, which shows that a hyperbolic knot has only finitely many non-characterizing slopes $p/q$ with $|q| \geq 3$. In a sense, this implies that ``most'' slopes $p/q$ are characterizing for any given hyperbolic knot $K$: The  probability that a randomly chosen slope $p/q$ is characterizing approaches 1 as $|p|+|q|\to \infty$.]}
 
-\begin{theorem}\label{thm:unknotting-one} If a knot $K$ has unknotting number one and is not a twisted Whitehead double, then $K$ has at most finitely many integer characterizing slopes.
+\begin{theorem}\label{thm:unknotting-one} If a knot $K$ has unknotting number $u(K)=1$ and is not a twisted Whitehead double, then $K$ has at most finitely many integer characterizing slopes.
 \end{theorem}
 
-We worked our way towards Theorem ~\ref{thm:unknotting-one} by manually finding knots $K_{n}'$ with equal $n-$ surgery as an unknotting number $u(K)=1$ knot $K$. Beginning with this process, we found the following result for knots with low crossing number:
+We worked our way towards Theorem ~\ref{thm:unknotting-one} by manually finding knots $K_{n}'$ with the same $n$-surgery as a given knot $K$ with $u(K)=1$. Beginning with this process, we found the following result for knots with low crossing number:
 
 \begin{theorem}\label{thm:low-crossing} For knots $K$ with crossing number $c(K) \leq 10$:
 	\begin{enumerate}[label=\normalfont \bf (\alph*)]
@@ -88,16 +88,16 @@ We worked our way towards Theorem ~\ref{thm:unknotting-one} by manually finding 
 	\end{enumerate}
 \end{theorem}
 
-This theorem specifies the number of integer characterizing slopes for several knots with $c(K) \leq 10$. It is possible that the bound on $c(K)$ can be increased, especially for knots with unknotting number $u(K) = 1$. Similarly, the list in part (b) can probably be expanded, encompassing every knot that fits Piccirilo's construction. Part (c) of this theorem also suggests that the assumption in Theorem ~\ref{thm:unknotting-one} that $K$ is not a Twisted Whitehead Double might not be necessary. But it was proven \kh{by Ozsváth and Szabó 2006, maybe cite}  that every slope is characterizing for $K$ the trefoil and the figure-eight knots, so we should expect part (c) to possibly hold only for twist knots with $n$ twists where $n$ is sufficiently large.
+This theorem specifies the number of integer characterizing slopes for several knots with $c(K) \leq 10$. It is possible that the bound on $c(K)$ can be increased, especially for knots with unknotting number $u(K) = 1$. Similarly, the list in part (b) can probably be expanded, encompassing every knot that fits Piccirilo's construction. Part (c) of this theorem also suggests that the assumption in Theorem ~\ref{thm:unknotting-one} that $K$ is not a twisted Whitehead double might is not a necessary condition. Moreover, it was proven \kh{by Ozsv\'{a}th and Szab\'{o} 2006, maybe cite}  that every slope is characterizing for the trefoil and the figure-eight knot. Part (c) shows that this fact does not generalize to twist knots with higher crossing numbers.
 
-Theorem~\ref{thm:low-crossing} affirmatively answers a question proposed in Baker and Motegi:
+Theorem~\ref{thm:low-crossing} affirmatively answers a question posed by Baker and Motegi \cite[Question~1.7]{baker-motegi}:
 
 \begin{question}
-	Are there any knots of crossing number less than 8 that have infinitely many noncharacterizing slopes? \cite[Question~1.7]{baker-motegi}
+	Are there any knots of crossing number less than 8 that have infinitely many noncharacterizing slopes? 
 \end{question}
 
 \begin{corollary}
-	All knots of crossing number less than 8 with unknotting number $u(K) = 1$ which are not twist knots have infinitely many noncharacterizing slopes.
+	All knots of crossing number less than 8 with unknotting number one which are not twist knots have infinitely many non-characterizing slopes.
 \end{corollary}
 
 The proof of this theorem relies in part on a computer program to calculate volumes of finitely many surgeries on each knot. We use the software SnapPy, which can triangulate hyperbolic manifolds. The script used is included on \kh{maybe put on Appendix?}, and the files produced for all knots encompassed can be found on \kh{Kyle's website}.
@@ -141,7 +141,7 @@ From a two-component link $K\cup c$ where $c$ is an unknot linked with $K$, we c
 
 Kouno, Motegi, and Shibuya prove a theorem regarding twist families \cite[Theorem 3.2]{twisting-knot-types}, which we rephrase as follows for use in the proof of Theorem 1.1:
 
-\begin{theorem}[Kouno, Motegi, and Shibuya] Let $K$ be a knot in $S^3$ and $c$ an unknot linked with $K$. If $c$ is not a meridian of $K$, then there are at most finitely many integers $n$ such that $K_{V,n}\simeq K$. 
+\begin{theorem}[Kouno-Motegi-Shibuya] Let $K$ be a knot in $S^3$ and $c$ an unknot linked with $K$. If $c$ is not a meridian of $K$, then there are at most finitely many integers $n$ such that $K_{V,n}\simeq K$. 
 \end{theorem}
 
 \subsection{Proof of Theorem~\ref{thm:unknotting-one}} We show that under the hypotheses on $K$, $K_n'\simeq K$ for at most finitely many $n$. If $K_n'\not\simeq K$ for all $n$, the conclusion holds. If $K_N'\simeq K$ for some $N$, then we note that $K_n'$ is obtained from an $(n-N)$-twist of $K$ through the unknot $c$. Moreover, $c$ is not a meridian to $K_N'$ if it is not a meridian to $K_0'$. To see this, note that if $c$ is a meridian to $K_0'$, then twisting through $c$ does not change $K_0'$; hence $K_0'\simeq K_N'$, and $c$ is not a meridian to $K_N'$. It remains to show that $c'$ is not a meridian to $K_0'$, for then Theorem 2.2 applies to the twist family $\{K_n'\}$ to show that $K_n'\simeq K_N'\simeq K$ for at most finitely many $n$. 
@@ -192,7 +192,7 @@ Finding this bound and examining the volumes of each of $2 N + 1$ knots in the t
 \subsubsection{Code and Data}
 We produced a framed link $L = K \cup R \cup c$ for each of the knots $K$, where $R$ and $c$ are unknotted components and $c$ is a meridian to $R$. This link is such that, if the framing on $R$ is zero and the framings on $K$ and $c$ are any integer numbers, an equivalent surgery diagram to $L$ is a link $L' = B \cup R \cup G$ that satisfies Piccirilo's theorem, with $K$ turning into $B$ and $c$ turning into $G$.
 
-Any link can be described by a partitioned sequence of even numbers called its Dowker-Thistlewhaite Code, or DT code. This is provided by the software SnapPy. In the case of a link $L$ fitting the description above, we use the following lemma:
+Any link can be described by a partitioned sequence of even numbers called its Dowker-Thistlethwaite  code, or DT code. This is provided by the software SnapPy. In the case of a link $L$ fitting the description above, we use the following lemma:
 
 \begin{lemma}
 	Up to isotopy, $L$ can be uniquely described by its DT code.
@@ -201,21 +201,21 @@ Any link can be described by a partitioned sequence of even numbers called its D
 	TBD
 \end{proof}
 
-The script "integral\_slopes.py", given the DT code of a link $L$ satisfying the conditions above, outputs a list of possible integral characteristic slopes for any knot $K$. It relies on writing a text file, running it on SnapPy, saving the output, and interpreting it repeatedly. There are certain system requirements explicit on the code. The script consists of the following steps:
+The script \texttt{integral\char`_slopes.py}, given the DT code of a link $L$ satisfying the conditions above, outputs a list of possible integral characteristic slopes for any knot $K$. It relies on writing a text file, running it on SnapPy, saving the output, and interpreting it repeatedly. There are certain system requirements explicit on the code. The script consists of the following steps:
 
 \begin{enumerate}
-	\item From the DT code, it writes the file "[INFO]K.py". This file asks for the volume of the knot $K$, for the volume of the manifold $Z = S_0^3(R)$ obtained by zero-surgery filling the 1-handle component, and for the length of the Seifert longitude in $Z$.
-	\item SnapPy opens, runs, and saves this file, producing a first output file named "[OUT][INFO]K.py".
+	\item From the DT code, the program writes the file \texttt{[INFO]K.py}. This file asks for the volume of the knot $K$, for the volume of the manifold $Z = S_0^3(R)$ obtained by zero-surgery filling the 1-handle component, and for the length of the Seifert longitude in $Z$.
+	\item SnapPy opens, runs, and saves this file, producing a first output file named \texttt{[OUT][INFO]K.py}.
 	\item The program extracts this information and calculates the bound $N$ using the theorems of hyperbolic Dehn surgery.
-	\item The program writes the file "[TEST]K.py". This file asks for the volume of each knot $K_{n}'$ in the twist family of $K$, whose exterior is easily obtained by doing $n$-surgery on the first component of the manifold $Z$, for all $n$ such that $|n| \leq N$.
-	\item SnapPy opens, runs, and saves this file, producing a second output file named "[OUT][TEST]K.py".
+	\item The program writes the file \texttt{[TEST]K.py}. This file asks for the volume of each knot $K_{n}'$ in the twist family of $K$, whose exterior is easily obtained by doing $n$-surgery on the first component of the manifold $Z$, for all $n$ such that $|n| \leq N$.
+	\item SnapPy opens, runs, and saves this file, producing a second output file named \texttt{[OUT][TEST]K.py}.
 	\item (\textit{Optional}) The program verifies if this last file contains all $2 N + 1$ cases. Because the run time in SnapPy is sometimes unpredictable, this step is recommended although the proof may be correct and faster without it.
 	\item The program identifies the knots whose volume is less than or equal (up to approximations) to the volume of the knot $K$. Those cases are singled out in the output file and, if possible, identified by SnapPy.
 \end{enumerate}
 
 All files corresponding to the knots listed in Theorem~\ref{thm:low-crossing} can be found on \kh{Kyle's website}. These files prove the theorem.
 
-\begin{proof} We produced the link $L$ aforementioned for all knots $K$ mentioned in Theorem~\ref{thm:low-crossing}. All the DT codes are included in the file "DT\_List.txt", which is correctly formatted for the script "integral\_slopes.py". Running it outputs the .py files labeled [OUT], and text that is reproduced in the file "results.txt". From reading this file, we see that:
+\begin{proof} We produced the link $L$ aforementioned for all knots $K$ mentioned in Theorem~\ref{thm:low-crossing}. All the DT codes are included in the file \texttt{DT\char`_List.txt}, which is correctly formatted for the script \texttt{integral\char`_slopes.py}. Running it outputs the \texttt{.py} files labeled \texttt{[OUT]}, and text that is reproduced in the file \texttt{results.txt}. From reading this file, we see that:
 	\begin{enumerate}[label=\normalfont \bf (\alph*)]
 		\item For all knots $K$ of crossing number at most 10 with unknotting number $u(K) = 1$ and not twist knots, the program indicates that only $n = 2$ or $n = -2$ could be characterizing.
 		\kh{\item For $K$ one of the knots $8_4$, $8_6$, $8_{10}$, or $8_{12}$, the program indicates that all knots $K_{n}'$ have different volume than $K$, so no integral slopes can be characterizing.}
