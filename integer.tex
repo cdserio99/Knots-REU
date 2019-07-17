@@ -113,16 +113,16 @@ We showed that Baker's conjecture holds for all knots $K$ with unknotting number
 \section{Knots with unknotting number one}\label{sec:unknotting-one}
 
 
-\subsection{Banded Hopf link diagrams} Knots with unknotting number one can be represented by diagrams consisting of a Hopf link with its two components connected by a band. We have the following theorem:
+\subsection{Banded Hopf link diagrams} A knot K with unknotting number one can be represented by a diagram that consists of a Hopf link with its two components connected by a band. We have the following theorem:
 
 \begin {theorem} If $K$ has unknotting number one, then it is obtained from the Hopf link by a single band move.
 \end{theorem}
 
-To find the banded Hopf link diagram for a knot $K$ with unknotting number one, we first find the unkotting crossing of $K$ and alternate this crossing. We then draw a meridian adjacent to this crossing and handle slide $K$ over the meridian. After simplification, we obtain the banded Hopf link diagram for knot $K$. \kh{[Figure needed]}
+To find the banded Hopf link diagram for a knot $K$ with unknotting number one, we first find the unkotting crossing of $K$ and alternate it. We then draw a meridian adjacent to it and slide $K$ over the meridian. After simplification, we obtain the banded Hopf link diagram for $K$. 
 
-We now present a characterization of twisted Whitehead double knots in terms of their band presentations:
+We now present a characterization of twisted Whitehead doubles in terms of their band presentations:
 
-\begin{theorem} A knot $K$ is a twisted Whitehead double if and only if $K$ has a band presentation in which the band does not cross either component of the Hopf link.
+\begin{theorem} A knot $K$ is a twisted Whitehead double if and only if it has a band presentation in which the band does not cross either component of the Hopf link.
 \end{theorem}
 \begin{proof}
 	\kh{[Is a proof necessary here? Can we find a resource?]}
@@ -143,18 +143,16 @@ We now present a characterization of twisted Whitehead double knots in terms of 
 
 If $K$ is a knot with $u(K)=1$, then for any integer $n$, this construction yields another knot $K_n'$ (not necessarily distinct from $K$) with the same $n$-surgery as $K$. We begin with a banded Hopf link diagram for $K$. We take a Hopf link with components $R$ and $B$, both with framings 0, and we handle slide $B$ over $R$ according to the band presentation for $K$. This produces a two-component link, with $B$ becoming $K$ and $R$ becoming a 0-framed unknot $c$ linked with $K$. We adjust the framing of $B$ to $n$. If we add a meridian $G$ to $R$ and slide $B$ back over $R$, then we obtain a diagram fitting into Picirillo's construction.
 
-To obtain the knot $K_n'$, we begin with the two component link $B\cup R$ described above, where $B$ is $K$ with framing $n$ and $R$ is a 0-framed unknot. We add a 0-framed meridian $G$ to $K$, and we note that if $B$ has nonzero framing, then by a slam dunk, we can change the framing of $B$ to 0 if we add a meridian $P$ to $B$ with framing $-1/n$. We slide $B$ over $R$, and we isotope the diagram until $B$ and $R$ are both unknots which cross each other twice, i.e., $B$ and $R$ form a Hopf link if $G$ is removed. We then slide $G$ over $B$ until $G$ is no longer linked with $R$. At this stage, we can remove $R$ using a ``lightbulb trick." This leaves us with a two-component link $G\cup P$. The component $G$ is the knot $K_0'$ with the same 0-surgery as $K$, and $P$ is an unknot $c'$ linked with $K_0'$. We now obtain $K_n'$ by adding $n$ twists to $K_0'$ along $c'$.
+To obtain the knot $K_n'$, we begin with the two component link $B\cup R$ described above, where $B$ is $K$ with framing $n$ and $R$ is a 0-framed unknot. We add a 0-framed meridian $G$ to $K$, and we note that if $B$ has nonzero framing, then by a slam dunk, we can change the framing of $B$ to 0 if we add a meridian $P$ to $B$ with framing $-1/n$. We slide $B$ over $R$, and we isotope the diagram until $B$ and $R$ are both unknots which cross each other twice, i.e., $B$ and $R$ form a Hopf link if $G$ is removed. We then slide $G$ over $B$ until $G$ is no longer linked with $R$. At this stage, we can remove $R$ using a ``lightbulb trick." This leaves us with a two-component link $G\cup P$. The component $G$ is the knot $K_0'$ with the same 0-surgery as $K$, and $P$ is an unknot $c'$ linked with $K_0'$. We obtain $K_n'$ by an n-Rolfson twist on $G\cup P$, which is adding $n$ twists to $K_0'$ along $c'$.
 
 
 \subsection{Twist families of knots}
 
 Let $K$ be an unoriented smooth knot in the oriented 3-sphere $S^3$ and $V$ a solid torus with a preferred framing that contains $K$ in its interior. Define an orientation-preserving homeomorphism $f_n$ of $V$ such that $f_n(m)=m$ and  $f_n(l)=l+nm$ in $H_1(\partial V)$ where $(m, l)$ is a preferred meridian-longitude pair of $V$. Call $f_n$ a twisting homeomorphism, which defines the new knot $f_n(K)$ in $S^3$ and thus a twisting operation on $K$. Write $K_{V,n} := f_n(K)$.
 
-From a two-component link $K\cup c$ where $c$ is an unknot linked with $K$, we can obtain a new knot $K_n := K_{V,n}$ where $K_{V,n}$ is with respect to $c$ as the preferred meridian of a solid torus V containing $K$ in its interior (i.e. we obtain $K_n$ from $K\cup c$ by twisting $n$ times along $c$ for $K$ in $\mathrm{int}(V)$ for $V$ a solid torus with meridian $c$). A twist family of knots is a set $K_A=\{K_n \,|\, n \in A\}$ with $A$ some index set. Note that for all $m, n\in\mathbb{Z}$,  $K_m$ is obtained from $K_n$ by a ($m-n$)-twist of $V$ by \cite[Remark 2.2]{twisting-knot-types}. Thus the knots $K_n'$ obtained from Piccirillo's construction form a twist family. 
+From a two-component link $K\cup c$ where $c$ is an unknot linked with $K$, we can obtain a new knot $K_n := K_{V,n}$ where $K_{V,n}$ is with respect to $c$ as the preferred meridian of a solid torus V containing $K$ in its interior (i.e. we obtain $K_n$ from $K\cup c$ by twisting $n$ times along $c$ for $K$ in $\mathrm{int}(V)$ for $V$ a solid torus with meridian $c$). A twist family of knots is a set $K_A=\{K_n \,|\, n \in A\}$ with $A$ some index set. Note that for all $m, n\in\mathbb{Z}$,  $K_m$ is obtained from $K_n$ by a ($m-n$)-twist of $V$ by \cite[Remark 2.2]{twisting-knot-types}. Thus knots $K_n'$ obtained from Piccirillo's construction form a twist family. Additionally, our definition of $K_n$ allows us to adapt a theorem of Kouno, Motegi, and Shibuya regarding twist families \cite[Theorem 3.2]{twisting-knot-types} in the solid torus V into the context of $K\cup c$ for use in our proof of Theorem 1.1. 
 
-Kouno, Motegi, and Shibuya prove a theorem regarding twist families \cite[Theorem 3.2]{twisting-knot-types}, which we rephrase as follows for use in the proof of Theorem 1.1:
-
-\begin{theorem}[Kouno-Motegi-Shibuya] Let $K$ be a knot in $S^3$ and $c$ an unknot linked with $K$. If $c$ is not a meridian of $K$, then there are at most finitely many integers $n$ such that $K_{V,n}\simeq K$. 
+\begin{theorem}[Kouno-Motegi-Shibuya] Let $K$ be a knot in $S^3$ and $c$ an unknot linked with $K$. If $c$ is not a meridian of $K$, then there are at most finitely many integers $n$ such that $K_n\simeq K$. 
 \end{theorem}
 
 \subsection{Proof of Theorem~\ref{thm:unknotting-one}} We show that under the hypotheses on $K$, $K_n'\simeq K$ for at most finitely many $n$. If $K_n'\not\simeq K$ for all $n$, the conclusion holds. If $K_N'\simeq K$ for some $N$, then we note that $K_n'$ is obtained from an $(n-N)$-twist of $K$ through the unknot $c$. Moreover, $c$ is not a meridian to $K_N'$ if it is not a meridian to $K_0'$. To see this, note that if $c$ is a meridian to $K_0'$, then twisting through $c$ does not change $K_0'$; hence $K_0'\simeq K_N'$, and $c$ is not a meridian to $K_N'$. It remains to show that $c'$ is not a meridian to $K_0'$, for then Theorem 2.2 applies to the twist family $\{K_n'\}$ to show that $K_n'\simeq K_N'\simeq K$ for at most finitely many $n$. 
