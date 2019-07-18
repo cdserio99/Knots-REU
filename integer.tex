@@ -215,13 +215,14 @@ Finding this bound and examining the volumes of each of $2 N + 1$ knots in the t
 \subsubsection{Code and Data}
 We produced a framed link $L = K \cup R \cup c$ for each of the knots $K$, where $R$ and $c$ are unknotted components and $c$ is a meridian to $R$. This link is such that, if the framing on $R$ is zero and the framings on $K$ and $c$ are any integer numbers, an equivalent surgery diagram to $L$ is a link $L' = B \cup R \cup G$ that satisfies Piccirilo's theorem, with $K$ turning into $B$ and $c$ turning into $G$.
 
-Any link can be described by a partitioned sequence of even numbers called its Dowker-Thistlethwaite  code, or DT code. This is provided by the software SnapPy. In the case of a link $L$ fitting the description above, we use the following lemma:
+Any link can be described by a partitioned sequence of even numbers called its Dowker-Thistlethwaite  code, or DT code. This is provided by the software SnapPy. In the case of a framed link $L$ fitting the description above, we use the following lemma:
 
 \begin{lemma}
 	Up to isotopy, $L$ can be uniquely described by its DT code.
 \end{lemma}
 \begin{proof}
-	TBD
+	This lemma is a direct application of Doll and Hoste's Theorem 1.2 \kh{[CITE]} to our link $L$. As defined, $L$ will always be a nonsplit link whose orientation is irrelevant for the purposes of integral surgery. $R$ and $c$ are two unknots, so $L$ is a prime link if and only if $K$ is a prime knot. That is the single case we are interested in, since only prime knots are classified along with their invariants and diagrams. Thus, by Doll and Hoste, minimal projections of $L$ are in one-to-one correspondence with valid DT codes.
+	Finally, there is a single solution for the question of which of the components is $K$, $R$, and $c$. We use that $c$ is strictly a meridian to $R$, so its only crossings are the two they share. Since the entries on the DT code come from crossings either within a single component or between two different ones, we notice that the code corresponding to the component $c$ will have length 1 (since, by definition of a DT code, only even labeled crossings appear). $R$ also does not have crossings with itself, but it has crossings with $R$ and $c$, so its code has length greater than 1. Moreover, since $K$ is not an unknot, $c(K) \geq 3$, so the code corresponding to $K$ will always be longer than the code corresponding to $R$. Thus, it is clear that $l(K) > l(R) > l(c) = 1$, where $l(X)$ is the code length of the component $X$.
 \end{proof}
 
 The script \texttt{integral\char`_slopes.py}, given the DT code of a link $L$ satisfying the conditions above, outputs a list of possible integral characteristic slopes for any knot $K$. It relies on writing a text file, running it on SnapPy, saving the output, and interpreting it repeatedly. There are certain system requirements explicit on the code. The script consists of the following steps:
