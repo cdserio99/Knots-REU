@@ -227,18 +227,18 @@ Any link can be described by a partitioned sequence of even numbers called its D
 The script \texttt{integral\char`_slopes.py}, given the DT code of a link $L$ satisfying the conditions above, outputs a list of possible integral characteristic slopes for any knot $K$. It relies on writing a text file, running it on SnapPy, saving the output, and interpreting it repeatedly. There are certain system requirements explicit on the code. The script consists of the following steps:
 
 \begin{enumerate}
-	\item From the DT code, the program writes the file \texttt{[INFO]K.py}. This file asks for the volume of the knot $K$, for the volume of the manifold $Z = S_0^3(R)$ obtained by zero-surgery filling the 1-handle component, and for the length of the Seifert longitude in $Z$.
-	\item SnapPy opens, runs, and saves this file, producing a first output file named \texttt{[OUT][INFO]K.py}.
+	\item From the DT code, the program writes the file \texttt{K [INFO].py}. This file asks for the volume of the knot $K$, for the volume of the manifold $Z = S_0^3(R)$ obtained by zero-surgery filling the 1-handle component, and for the length of the Seifert longitude in $Z$.
+	\item SnapPy opens, runs, and saves this file, producing a first output file named \texttt{[OUT] K [INFO].py}.
 	\item The program extracts this information and calculates the bound $N$ using the theorems of hyperbolic Dehn surgery.
-	\item The program writes the file \texttt{[TEST]K.py}. This file asks for the volume of each knot $K_{n}'$ in the twist family of $K$, whose exterior is easily obtained by doing $n$-surgery on the first component of the manifold $Z$, for all $n$ such that $|n| \leq N$.
-	\item SnapPy opens, runs, and saves this file, producing a second output file named \texttt{[OUT][TEST]K.py}.
-	\item (\textit{Optional}) The program verifies if this last file contains all $2 N + 1$ cases. Because the run time in SnapPy is sometimes unpredictable, this step is recommended although the proof may be correct and faster without it.
+	\item The program writes the file \texttt{K [TEST].py}. This file asks for the volume of each knot $K_{n}'$ in the twist family of $K$, whose exterior is easily obtained by doing $n$-surgery on the first component of the manifold $Z$, for all $n$ such that $|n| \leq N$.
+	\item SnapPy opens, runs, and saves this file, producing a second output file named \texttt{[OUT] K [TEST].py}.
+	\item The program verifies if this last file contains all $2 N + 1$ cases. This step is included because the run time in SnapPy is sometimes unpredictable.
 	\item The program identifies the knots whose volume is less than or equal (up to approximations) to the volume of the knot $K$. Those cases are singled out in the output file and, if possible, identified by SnapPy.
 \end{enumerate}
 
 All files corresponding to the knots listed in Theorem~\ref{thm:low-crossing} can be found on \kh{Kyle's website}. These files prove the theorem.
 
-\begin{proof} We produced the link $L$ aforementioned for all knots $K$ mentioned in Theorem~\ref{thm:low-crossing}. All the DT codes are included in the file \texttt{DT\char`_List.txt}, which is correctly formatted for the script \texttt{integral\char`_slopes.py}. Running it outputs the \texttt{.py} files labeled \texttt{[OUT]}, and text that is reproduced in the file \texttt{results.txt}. From reading this file, we see that:
+\begin{proof} We produced the link $L$ aforementioned for all knots $K$ mentioned in Theorem~\ref{thm:low-crossing}. All the DT codes are included in the file \texttt{DT\char`_List.txt}, which is correctly formatted for the script \texttt{integral\char`_slopes.py}. Running it outputs the \texttt{.py} files labeled \texttt{[OUT]}, and text that is reproduced in the file \texttt{output.txt}. From reading this file, we see that:
 	\begin{enumerate}[label=\normalfont (\alph*)]
 		\item For all knots $K$ of crossing number at most 10 with unknotting number $u(K) = 1$ and not twist knots, the program indicates that only $n = 2$ or $n = -2$ could be characterizing.
 		\kh{\item For $K$ one of the knots $8_4$, $8_6$, $8_{10}$, or $8_{12}$, the program indicates that all knots $K_{n}'$ have different volume than $K$, so no integral slopes can be characterizing.}
