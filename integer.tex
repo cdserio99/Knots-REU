@@ -94,8 +94,6 @@ Theorem 1.2 affirmatively answers a question posed by Baker and Motegi, who ask 
 
 The proof of this theorem relies in part on a computer program to calculate volumes of finitely many surgeries on each knot. We use the software SnapPy, which can triangulate hyperbolic manifolds. The script used is included on \kh{maybe put on Appendix?}, and the files produced for all knots encompassed can be found on \kh{Kyle's website}.
 
-\subsection{Surgery duals} Let $Y$ be a 3-manifold given by $p/q$-surgery on a knot $K\subset S^3$. Then $Y$ is obtained by thickening $K$ to a solid torus $N(K)$, removing the interior of $N(K)$ from $S^3$, and gluing a solid torus back into $S^3\setminus\mathrm{int}(N(K))$ in a different manner. Note that $K$ is the core of the solid torus $N(K)$, i.e., $K$ is identified with $S^1\times\{0\}$ under the diffeomorphism between $N(K)$ and $S^1\times D^2$. The core of the new solid torus that is glued into $S^3\setminus\mathrm{int}(N(K))$ specifies a knot $\gamma$ in $Y$, which we call the \textit{surgery dual} of $K$. In a surgery diagram for $Y$, $\gamma$ can be represented by a meridian to $K$. If $K'\subset S^3$ is another knot which yields the same $p/q$-surgery as $K$, then one can ask how the surgery dual $\gamma'$ of $K'$ in $Y$ is related to $\gamma$. 
-
 \begin{conjecture}[Baker] If $K$ and $K'$ are non-isotopic knots in $S^3$ which yield the same $3$-manifold $Y$ under $p/q$-surgery, then their surgery duals $\gamma$ and $\gamma'$ in $Y$ are not homotopic.
 \end{conjecture}
 
@@ -182,7 +180,8 @@ Note that in our context, $(0,0)$-surgery on $K_0'\cup c'$ always results in $S^
 \end{corollary}
 
 \begin{proof}
-	We know that $c'$ and $K_0'$ are surgery duals to $K$ and $c$ respectively. Show that it follows that $c$ and $K$ are dual to $K_0'$ and $c'$ respectively.
+	We show that if $c'$ and $K_0'$ are surgery duals to $K$ and $c$ respectively, then $c$ and $K$ are dual to $K_0'$ and $c'$ respectively, which is essentially the symmetry of surgical duality in $S^{3}$. Suppose we perform $n$-surgery on $Q$, a knot component, then its dual $Q'$ in $S^{3}_{n}(K)$ can be represented as a meridian to it. Note that both $K_0'$ and $c$ are 0-framed in our construction and hence it suffices to show that the duality is symmetric in the case where we perform 0-surgery on $Q'$ and get back $S^{3}$ from $Q \cup Q'$. The dual to $Q'$ is a 0-framed meridian $Q''$ to it. We then slide $Q''$ over $Q$, after which $Q''$ inherits the $n$-framing from $Q$ since $lk(Q, Q'')=0$ and it had 0-framing originally. After isotopes in $S^3$, we can get $Q''$ disjoint from $Q'$, leaving $n$-framed $Q$ only linked with $0$-framed $Q'$ which we can cancel now and get the $n$-framed $Q'' = Q$ as desired. 
+	  
 \end{proof}
 This completes the proof of the theorem.
 
