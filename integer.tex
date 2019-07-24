@@ -60,7 +60,7 @@
 
 \title{Integer characterizing slopes and unknotting numbers}
 
-\author[G. Agostini, S. Chen, K. Hayden, C. Serio, C. Wang, A. Wu, and K. Wu]{Gabriel Agostini, Sophia Chen, Kyle Hayden, Christian Serio, Cecilia Wang, Anton Wu, and Kexin Wu}
+\author[Agostini, Chen, Daemi, Hayden, Serio, Wang, A. Wu, and K. Wu]{Gabriel Agostini, Sophia Chen, Aliakbar Daemi, Kyle Hayden, Christian Serio, Cecilia Wang, Anton Wu, and Kexin Wu}
 
 
 
@@ -103,7 +103,7 @@ We showed that Baker's conjecture holds for all knots $K$ with unknotting number
 \section{Knots with unknotting number one}\label{sec:unknotting-one}
 
 
-\subsection{Banded Hopf link diagrams} A knot K with unknotting number one can be represented by a diagram that consists of a Hopf link with its two components connected by a band. We have the following theorem:
+\subsection{Banded Hopf link diagrams}\label{band} A knot $K$ with unknotting number one can be represented by a diagram that consists of a Hopf link with its two components connected by a band. We have the following result:
 
 \begin {theorem} If $K$ has unknotting number one, then it is obtained from the Hopf link by a single band move.
 \end{theorem}
@@ -118,47 +118,57 @@ We note that twist knots are twisted Whitehead doubles, but not all twisted Whit
 
 \end{definition}
 
-\subsection{Piccirillo's construction} We have the following theorem due to Piccirillo:
+\subsection{Baker and Motegi's Construction} We follow Baker and Motegi \cite{baker-motegi} in constructing knots $K_n'$ with the same $n$-surgery as a given knot $K$ satisfying certain hypotheses. We prove the following, which strengthens Theorem 1.3 in Baker-Motegi:
 
-\begin{theorem}[Piccirillo, 2018]
-	Let $L$ be a three-component link consisting of disjoint components $R$, $B$, and $G$, giving a surgery diagram such that
-	\begin{enumerate}[label=\normalfont (\alph*)]
-		\item $R$ is a 0-framed unknot,
-		\item $B$ and $G$ have integral framings,
-		\item If we remove $G$ (resp. $B$), then $R$ is isotopic to a meridian to $B$ (resp. $G$).
-	\end{enumerate}
-	Let $Y$ be the $3$-manifold given by surgery on $L$. Then for any $n\in\mathbb{Z}$, there are knots $K,K'\subset S^3$ such that $Y\cong S_n^3(K)\cong S_n^3(K')$.
+\begin{proposition}\label{prop 2.3}
+	Let $K$ be a knot in $S^3$. Suppose we can take an unknot $c$ linked with $K$ so that $(0,0)$ surgery on $K\cup c$ yields $S^3$ and $c$ is not a meridian of $K$. Then $K$ has at most finitely many integer characterizing slopes.
+\end{proposition}
 
-\end{theorem}
+We first recall the definition of a surgery dual to a knot $K\subset S^3$. When we perform $p/q$-surgery on $K$, we thicken $K$ to obtain a solid torus, remove this solid torus from $S^3$, and glue in another solid torus. The core circle of this new solid torus is a new knot $\gamma$, the \textit{surgery dual} of $K$ in the manifold $S^3_{p/q}(K)$. The following lemma gives a symmetry condition on the relation of surgery duality.
 
-Thus for $K$ a knot with unknotting number $u(K)=1$, there exists another knot $K_n'$ (not necessarily distinct from $K$) with the same $n$-surgery as $K$ for any integer $n$
+\begin{lemma}
+	Let $K$ be a knot in $S^3$ and let $n\in\mathbb{Z}$. Let $\gamma$ be the surgery dual to $K$ in the manifold $S^3_n(K)$. Let $K'$ be the surgery dual to $\gamma$ in the manifold $S^3_0(\gamma)$. Then $K\cong K'$ in $S^3$.
+\end{lemma}
 
-Inspired by Piccirillo's construction, we can produce some form of the link $K \cup c$ for $K$ a knot with $u(K)=1$ that would serve as an intermediary between $n$-surgery on $K$ and explicit $K_n'$. We start with a banded Hopf link diagram for $K$. We take a Hopf link with components $R$ and $B$, both with framings 0, and we handle slide $B$ over $R$ according to the band presentation for $K$. This produces a two-component link where $B$ becomes $K$ and $R$ a 0-framed unknot $c$ linked with $K$. We then adjust the framing of $B$ to $n$ to correspond with $n$-surgery on $K$. Now add a meridian $G$ to $R=c$ and slide $B$ back over $R$ and we hereby obtain a diagram that fits into criteria of Piccirillo's construction that would allow us to produce $K_n'$ that shares the same $n$-surgery as $K$ by Kirby Calculus and isotopes in the end. 
+\begin{proof}
+	In a Kirby diagram for $n$-surgery on $K$, we can represent $\gamma$ by a small meridian to $K$. Performing $0$-surgery on $\gamma$ in the link $K\cup\gamma$ yields $S^3$ by a slam dunk move. Now the dual $K'$ of $\gamma$ can be represented in the Kirby diagram by a meridian to $\gamma$. If we slide $K'$ over $K$ in the surgery diagram and remove the cancelling pair $K\cup \gamma$, then we simply obtain another copy of $K$. Since handle slides give isotopies in the surgered manifold, this proves that $K\simeq K'$.
+\end{proof}
 
-Overall, we seek an explicit construction that would turn $n$-surgery on $K$ into $K_n'$, with its initial step inspired by Piccirillo's as above. Next, we take the following concepts developed by Baker and Motegi in \cite{baker-motegi} and Kouno, Motegi, and Shibuya in \cite{twisting-knot-types} and adapt them for our use.
+We now state a lemma of Baker-Motegi \cite[Lemma 2.4]{baker-motegi}, with notation adapted.
 
-\subsection{Twist families of knots}
+\begin{lemma}[Baker-Motegi]
+	Let $K'\cup c'$ be a two-component link in $S^3$ such that $c'$ is a meridian of $K'$. Then $(0,0)$-surgery on $K'\cup c'$ results in $S^3$ with its surgery dual link $c\cup K$, for which $c$ is a meridian of $K$.
+\end{lemma}
 
-We follow Kouno, Motegi, and Shibuya's treatment of a twisting operation on a knot inside a solid torus . Let $K$ be an unoriented smooth knot in the oriented 3-sphere $S^3$ and $V$ a solid torus with a preferred framing that contains $K$ in its interior. Define an orientation-preserving homeomorphism $f_n$ of $V$ such that $f_n(m)=m$ and  $f_n(l)=l+nm$ in $H_1(\partial V)$ where $(m, l)$ is a preferred meridian-longitude pair of $V$. This twisting homeomorphism $f_n$ defines a new knot $f_n(K)$ in $S^3$, the result of twisting $K$ inside $V$. Write $K_{V,n} := f_n(K)$. 
+To be clear, $c$ is the surgery dual to $K'$ and $K$ is the dual to $c'$ in $S^3$. To apply this lemma, we prove the following result:
 
-From a two-component link $K\cup c$ with $c$ an unknot linked with $K$, we can obtain a new knot $K_n := K_{V,n}$ by taking $V$ to be a solid torus that has preferred meridian $c$ and contains $K$ in its interior. Loosely speaking, we obtain $K_n$ from $K\cup c$ by twisting $K$ for $n$ times along $c$ and in particular, $K_0=K$. We take after \cite[Section 2]{baker-motegi} to define the \textit{twist family} with base knot $K$ and unknot $c$ to be the set $\{K_n \,|\, n \in \mathbb{Z}\}$. Note that for all $m, n\in\mathbb{Z}$,  $K_m$ is obtained from $K_n$ by an ($m-n$)-twist along $V$ \cite[Remark 2.2]{twisting-knot-types}, so any knot $K_n$ can be taken as the base of the twist family.
+\begin{lemma}
+	Let $K$ be a knot in $S^3$ and $c$ an unknot linked with $K$, such that $(0,0)$-surgery on the link $K\cup c$ results in $S^3$. Define $c'$ and $K'$ to be the surgery duals to $K$ and $c$ in $S^3$, respectively. Then $(0,0)$-surgery on $K'\cup c'$ yields $S^3$.
+\end{lemma}
 
-To construct the knot $K_n'$ from $n$-surgery on $K$, we first change the framing of $K$ to $n$ and call it $B$. We then add a cancelling pair $R \cup G$ to $B$ in the exact same place as in the diagram $B\cup R \cup G$ that we would get by following the procedure illustrated near the end of section 2.2 to invoke Piccirillo's theorem. Note that by a slam dunk, we can change the framing of $B$ to 0 if we add a $-1/n$-framed meridian $P$ to $B$. Specifically when $n=0$, such a slam dunk leads to adding $P$ with $-\infty$ framing to $B$ while the framing of $B$ remains unchanged, which amounts to doing nothing to $B$. We slide $B$ over $R$ and isotope the diagram until $B$ and $R$ are both unknots that cross each other twice (i.e., $B$ and $R$ form a Hopf link if $G$ were removed). Then slide $G$ over $B$ until $G$ is no longer linked with $R$. Now we can remove $R$ using a "lightbulb trick" that would leave us a two-component link $G\cup P$, with $G$ as the knot $K_0'$ that shares the same 0-surgery as $K$ (since a slam dunk amounted to not having added any $P$ in the first place) and $P$ as an unknot $c'$ linked with $K_0'$. Observe that the framing of $P$ remains unchanged throughout this process and we can therefore do a $n$-Rolfsen twist on $G\cup P$ to get rid of $P=c'$. As a result, we are left with only one knot, the knot obtained from twisting $K_0'$ along $c'$ for $n$ times, which is exactly $K_n'$ as desired.
+\begin{proof}
+	By assumption, the manifold obtained after $(0,0)$-surgery on $K\cup c$ is $S^3$. Thus to perform $(0,0)$-surgery on $K'\cup c'$ in $S^3$, we can first perform $(0,0)$-surgery on $K\cup c$ and then perform $(0,0)$-surgery on $K'\cup c'$ in the surgered manifold. To do so, we first thicken the two knots $K$ and $c$ to solid tori, remove these solid tori from $S^3$, and replace them with new solid tori. By definition of surgery duals, the cores of these two new solid tori are $c'$ and $K'$ respectively. We now thicken $K'$ and $c'$ and replace their tubular neighborhoods with solid tori whose core circles are the duals of $K'$ and $c'$. By Lemma 2.4, these duals are $c$ and $K$ respectively. Since the two solid tori that were initially removed when we performed $(0,0)$-surgery on $K\cup c$ had core circles $c$ and $K$, this procedure amounts to removing two solid tori from $S^3$ and gluing them back in the same manner. We therefore obtain $S^3$ again.
+\end{proof}
+	
+We record one more result of Baker-Motegi \cite[Theorem 2.1]{baker-motegi}, which we state as a lemma:
 
-The knots $K_n'$ for $n \in \mathbb{Z}$ clearly form a twist family with base $K_0'$ (in fact, any $K_n'$ works) and unknot $c'$, according to our definition above. Thus we aim to adapt a theorem in \cite{twisting-knot-types} into our context for our use in the proof of theorem 1.1. 
+\begin{lemma}[Baker-Motegi]
+	Let $K'\cup c'$ be a link in $S^3$ such that $c'$ is unknotted. Suppose that $(0,0)$-surgery on $K'\cup c'$ results in $S^3$. Let $K$ be the knot in $S^3$ which is surgery dual to the image of $c'$ in the surgered $S^3$, and let $K_n'$ be the knot obtained from $K'$ by twisting $n$ times along $c'$. In particular, $K_0'=K'$. Then $S^3_n(K)\cong S^3_n(K_n')$ for all integers $n$. Moreover, if $c'$ is not a meridian to $K'$, then $K\not\simeq K_n'$ for all but finitely many $n$.
+\end{lemma}
 
-The wrapping number $w_V(K)$ of $K$ in $V$ is defined to be the minimal intersection number of $K$ with a meridional disc in $V$. 
-Kouno, Motegi, and Shibuya proved that for a twist family $\{K_{V,n}\}$ in a solid torus $V$ with $w_V(K)\geq 2$, there are at most finitely many integers $n_i$ for which $K_{V,n_i}\sim K$  \cite[Theorem 3.2]{twisting-knot-types}. Here, $K_{V,n_i}\sim K$ means that there exists a homeomorphism of $S^3$ carrying $K_{V,n_i}$ to $K$, which is weaker than the existence of an orientation-preserving homeomorphism of $S^3$ sending $K_{V,n_i}$ to $K$. Further, the latter existence is equivalent to the existence of an ambient isotopy between $K_{V,n_i}$ and $K$ \cite[Introduction]{twisting-knot-types}. Moreover, note that $w_V(K)\geq 1$ for $c$ linked with $K$ and $w_V(K)=1$ if and only if $c$ is a meridian to $K$. Our $G$ and $P=c'$ are always linked following the slam dunk in our construction of $K_n'$, assuming that for $n$=0, we add $P$ with $-\infty$ framing to $B$. Hence, we can translate \cite[Theorem 3.2]{twisting-knot-types} into the language of the link $K\cup c$ as follows:
+We are now equipped to prove Proposition 2.3. By Lemma 2.6 and the contrapositive of Lemma 2.5, we see that $c'$ is not a meridian to $K'$ under the hypotheses on $K$ and $c$. It follows from Lemma 2.7 that all but finitely many of the knots $K_n'$ sharing $n$-surgery with $K$ are not isotopic to $K$, i.e., all but finitely many integers are non-characterizing slopes for $K$.
 
+\subsection{Proof of Theorem~\ref{thm:unknotting-one}} We show that if $K$ has $u(K)=1$ and is not a twisted Whitehead double, then we can find an unknot $c$ as in Proposition~\ref{prop 2.3}. To do so, we consider the band presentation for $K$, as described in Section~\ref{band}. We begin with a Hopf link $R\cup B$, with both components framed 0. Using the band presentation for $K$ as an instruction, we handle slide $R$ over $B$. Afterwards, $R$ becomes the knot $K$, and $B$ becomes an unknot $c$ linked with $K$. We first show that this link $K\cup c$ satisfies the surgery hypothesis in Proposition 2.3:
 
-\begin{theorem}[Kouno-Motegi-Shibuya] Let $K$ be a knot in $S^3$ and $c$ an unknot linked with $K$. Let $\{K_n\}$ be the twist family with base knot $K$ and unknot $c$. If $c$ is not a meridian to $K$, then there are at most finitely many integers $n_i$ such that $K_{n_i}\simeq K$. 
-\end{theorem}
+\begin{lemma}
+	Performing $(0,0)$-surgery on the link $K\cup c$ yields $S^3$.
+\end{lemma}
 
-Here, the relation $\simeq$ denotes ambient isotopy of knots in $S^3$.
+\begin{proof}
+	By construction, $K\cup c$ is obtained by a handle slide from a Hopf link with both components $R$ and $B$ framed 0. After the handle slide, $R$ becomes $K$ with framing $\pm 2$, depending on the sign of the linking number of $R$ and $B$, and $B$ becomes $c$. If we adjust the initial framing of $R$ to $\mp 2$, then the handle slide yields the same link $K\cup c$, with both $K$ and $c$ having 0-framing. Thus $(0,0)$-surgery on $K\cup c$ is homeomorphic to $(\mp 2,0)$ surgery on $R\cup B$. It is a well-known fact that for any integer $n$, $(n,0)$-surgery on a Hopf link yields $S^3$.
+\end{proof}
 
-\subsection{Proof of Theorem~\ref{thm:unknotting-one}} We show that under the hypotheses on $K$, $K_n'\simeq K$ for at most finitely many $n$. If $K_n'\not\simeq K$ for all $n$, the conclusion holds. If $K_N'\simeq K$ for some $N$, then we regard $K_N'$ as the base knot of the family $\{K_n'\}$. Note that $c$ is not a meridian to $K_N'$ as long as it is not a meridian to $K_0'$. To see this, note that if $c'$ is a meridian to $K_N'$, then twisting through $c'$ does not change $K_N'$; hence by twisting $-N$ times, we see that $K_N'\simeq K_0'$, and $c'$ is a meridian to $K_0'$. It remains to show that $c'$ is not a meridian to $K_0'$, for then Theorem 2.5 applies to the twist family $\{K_n'\}$ to show that $K_n'\simeq K_N'\simeq K$ for at most finitely many $n$. 
-
-Since $K$ is not a twisted Whitehead double, in any band presentation for $K$, the band must cross one component of the Hopf link. The following lemma therefore proves that in the link $K\cup c$ appearing in Piccirillo's construction, the unknot $c$ is not a meridian to $K$.
+Since $K$ is not a twisted Whitehead double, in any band presentation for $K$, the band must cross one component of the Hopf link. The following lemma therefore proves that $c$ is not a meridian to $K$ in the above construction.
 
 \begin{lemma}
 	Let $R\cup B$ be a Hopf link, and consider a handle slide of $R$ over $B$ which leaves $R$ a meridian to $B$. Then there is an equivalent handle slide of $R$ over $B$ along a band which does not cross either $R$ or $B$.
@@ -167,23 +177,7 @@ Since $K$ is not a twisted Whitehead double, in any band presentation for $K$, t
 	TBD
 \end{proof}
 
-We now appeal to a lemma of Baker and Motegi \cite[Lemma 2.4]{baker-motegi}, with notation adapted:
-
-\begin{lemma}[Baker-Motegi, 2018]
-	Let $K_0'\cup c'$ be a two-component link in $S^3$ such that $c'$ is a meridian of $K_0'$. Then $(0,0)$-surgery on $K_0'\cup c'$ results in $S^3$ with its surgery dual link $c\cup K$, for which $c$ is a meridian to $K$.
-\end{lemma}
-
-Note that in our context, $(0,0)$-surgery on $K_0'\cup c'$ always results in $S^3$ with its surgery dual link $c\cup K$. We can thus simplify the lemma as: $c'$ being a meridian of $K_0'$ implies that $c$ is a meridian to $K$. Hence, we obtain the following corollary as the contrapositive of the simplified lemma. 
-
-\begin{corollary}
-	If $c$ is not a meridian to $K$, then $c'$ is not a meridian to $K_0'$, with $K$, $c$, $K_0'$ and $c'$ as above. 
-\end{corollary}
-
-\begin{proof}
-	We show that if $c'$ and $K_0'$ are surgery duals to $K$ and $c$ respectively, then $c$ and $K$ are dual to $K_0'$ and $c'$ respectively, which is essentially the symmetry of surgical duality in $S^{3}$. Suppose we perform $n$-surgery on $Q$, a knot component, then its dual $Q'$ in $S^{3}_{n}(K)$ can be represented as a meridian to it. Note that both $K_0'$ and $c$ are 0-framed in our construction and hence it suffices to show that the duality is symmetric in the case where we perform 0-surgery on $Q'$ and get back $S^{3}$ from $Q \cup Q'$. The dual to $Q'$ is a 0-framed meridian $Q''$ to it. We then slide $Q''$ over $Q$, after which $Q''$ inherits the $n$-framing from $Q$ since $lk(Q, Q'')=0$ and it had 0-framing originally. After isotopes in $S^3$, we can get $Q''$ disjoint from $Q'$, leaving $n$-framed $Q$ only linked with $0$-framed $Q'$ which we can cancel now and get the $n$-framed $Q'' = Q$ as desired. 
-	  
-\end{proof}
-This completes the proof of the theorem.
+Theorem 1.1 now follows from Proposition 2.3.
 
 \section{Knots with low crossing number}
 
