@@ -25,6 +25,8 @@
 \newcommand{\Diff}{\operatorname{Diff}}
 \newcommand{\km}{{\normalfont{(KM)}}}
 \newcommand{\vol}{\operatorname{vol}}
+\newcommand{\defeq}{\mathrel{\vcenter{\baselineskip0.5ex\lineskiplimit0pt\hbox{\scriptsize.}\hbox{\scriptsize.}}}=}
+\newcommand{\hs}{\hspace{0.05em}} % half-space
 
 
 %Environments
@@ -188,7 +190,39 @@ Theorem 1.1 now follows from Proposition 2.3.
 
 \section{Knots with low crossing number}
 
-\subsection{Hyperbolic Dehn surgery} \kh{[Recall and discuss the relevant theorems used in our approach.]}
+\subsection{Hyperbolic Dehn surgery} Recall that a \textit{hyperbolic $3$-manifold} is a compact, orientable $3$-manifold which admits a complete hyperbolic metric, (that is, a Riemannian metric with constant negative sectional curvature); we remark that such a $3$-manifold, being compact, has a finite hyperbolic volume. A knot $K\subset S^3$ is a \textit{hyperbolic knot} if $S^3\setminus N(K)$ is a hyperbolic $3$-manifold. As before its tubular neighborhood $N(K)$ is a torus, on which simple closed curves $\gamma$ are described up to isotopy by slopes $p/q\in\mathbb{Q}\cup\{\infty\}$. The torus $\partial N(K)$ inherits a Euclidean metric, and the \textit{length} $\ell(p/q)$ of a slope $p/q$ is the length, according to this Euclidean metric, of the shortest curve on the torus $\partial N(K)$ with slope $p/q$.
+
+Thurston's hyperbolic Dehn surgery theorem \cite[\S5.8]{thurston-notes} states that given any cusped hyperbolic $3$-manifold $M$, for each cusp there are finitely many slopes, known as `exceptional slopes', for which the $3$-manifold obtained by Dehn filling on $M$ does not inherit the hyperbolic metric. Thurston also showed \cite[p.~268]{benedetti-petronio} that if Dehn filling on $M$ yields a different hyperbolic $3$-manifold $M'$, then the volume of $M'$ is strictly smaller than the volume of $M$.
+
+Moreover, the famous `$2\pi$' theorem due to Gromov and Thurston gives a necessary condition for a slope to be exceptional; for our purposes the theorem says the following \cite{cooper-lackenby}:
+\begin{thm*}[Gromov--Thurston]
+Let $K$ be a hyperbolic knot. If $\ell(p/q)>2\pi$, then the $(p/q)$-filling on $S^3\setminus N(K)$ is hyperbolic.
+\end{thm*}
+Futer, et al., \cite{futer} proved the following bound on the volume of the $(p/q)$-filling on $S^3\setminus K$:
+\begin{thm*}[Futer, et al.]
+Let $K$ be a hyperbolic knot; let $X\defeq S^3\setminus N(K)$. If $\ell(p/q)>2\pi$, then the volume $\vol(X_{p/q})$ of the $(p/q)$-filling on $X$ satisfies:
+$$\vol(X_{p/q})\ge\left(1-\left(\frac{2\pi}{\ell(p/q)}\right)^2\,\right)^{3/2}\cdot\vol(X)$$
+\end{thm*}
+Finally, a result about slope length, found by Cooper and Lackenby \cite{cooper-lackenby}:
+\begin{thm*}[Cooper--Lackenby]
+Let $X$ be a cusped hyperbolic $3$-manifold, and suppose $s_1$, $s_2$ are two slopes on a torus $T\subset \partial X$. Then:
+$$\ell(s_1)\hs\ell(s_2)\ge\sqrt{3}\hspace{0.2em}\Delta(s_1,\hs s_2)$$
+where $\Delta(s_1,\hs s_2)$ is the minimum possible number of intersections between a curve with slope $s_1$ and a curve with slope $s_2$ on $T$.
+\end{thm*}
+For any knot $K\subset S^3$ with $u(K)=1$ which is not a twist knot, we can now find a number $N$ such that we can use the Baker--Motegi construction to prove easily that the slope $n$ is non-characterizing if $|n|\ge N$.
+
+Given $(K\cup c)\subset S^3$, where $c$ is an unknot which is not a meridian to $K$ and where $(0,\hs0)$-surgery on $K\cup c$ yields $S^3$, we add a meridian $m$ to $c$. We see that $(n,\hs0,\hs0)$-surgery on $K\cup c\cup m$ yields $S^3_n(K)$ since $c$ and $m$ form a canceling pair. On the other hand, if we remove a tubular neighborhood of $m$ and perform $0$-surgery on $c$, then we have a hyperbolic manifold $X$ containing the surgery dual $K'$ to $K$, on which $n$-surgery yields $S^3\setminus K_n'$. Our aim is to show that $\vol(S^3\setminus K_n')\ne\vol(S^3\setminus K)$, so that $K_n'$ is a different knot from $K$ and thus that $n$ is not a characterizing slope for $K$.
+
+Let $v\defeq\vol(S^3\setminus K)$ and $v_n'\defeq\vol(S^3\setminus K_n')$ and $v_X\defeq\vol(X)$. We drill the neighborhood $N(K')$ from $X$ and let $\ell$ be the length of the slope $0$ on the torus $\partial N(K')$. 
+By the result of Cooper and Lackenby the length ${\ell}_n$ of the slope $n$ on $\partial N(K')$ must satisfy:
+$${\ell}_n\ge\tfrac{1}{\ell}\hs|n|\sqrt{3}$$
+For $n$ large enough, we have ${\ell}_n>2\pi$; thus, we can apply the above bound of Futer, et al., to relate the volumes $v_X$ and $v_n'$ before and after the $n$-filling on $N(K')$:
+$$v_n'\ge\left(1-\left(\frac{2\pi}{{\ell}_n}\right)^2\,\right)^{3/2}\cdot v_X$$
+Now for $n$ large enough, we note that as $n$ increases, ${\ell}_n$ increases and thus the right-hand side increases. But if the right-hand side is greater than $v$, then we would have $v_n'>v$ as desired. So we set $(1-(2\pi/{\ell}_n)^2)^{3/2}\cdot v_X>v$ and substitute ${\ell}_n\ge\frac{1}{\ell}\hs|n|\sqrt{3}$; solving for $n$ gives:
+$$|n|>\frac{2\pi}{\sqrt{3}}\,\ell\hs\left(1-\left(\frac{v}{v_X}\right)^{2/3}\right)^{-1/2}$$
+Hence we have found $N=\frac{2\pi}{\sqrt{3}}\,\ell\,(1-(v/v_X)^{2/3})^{-1/2}$ such that if $|n|\ge N$, then $n$ is not a characterizing slope for $K$.
+
+Since we can calculate $v$, $v_X$, $\ell$ using SnapPy, we can calculate $N$, and then individually check the finitely many remaining cases (where $|n|<N$), using a computer script, as described below.
 
 \subsection{Proof of Theorem~\ref{thm:low-crossing}}
 
