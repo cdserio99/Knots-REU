@@ -1,19 +1,33 @@
-\begin{thebibliography}{KMS91}
+\begin{thebibliography}{FKP08}
 
 \bibitem[BM18]{baker-motegi}
 Kenneth~L. Baker and Kimihiko Motegi.
 \newblock Noncharacterizing slopes for hyperbolic knots.
 \newblock {\em Algebr. Geom. Topol.}, 18(3):1461--1480, 2018.
 
-\bibitem[KMS91]{twisting-knot-types}
-Masaharu Kouno, Kimihiko Motegi, and Tetsuo Shibuya.
-\newblock Twisting and knot types.
-\newblock {\em Journal of the Mathematical Society of Japan}, 44(2):199--216,
-  March 1991.
+\bibitem[BP92]{benedetti-petronio}
+Riccardo Benedetti and Carlo Petronio.
+\newblock {\em Lectures on hyperbolic geometry}.
+\newblock Springer, Berlin, 1992.
+
+\bibitem[CL98]{cooper-lackenby}
+Daryl Cooper and Marc Lackenby.
+\newblock Dehn surgery and negatively curved 3-manifolds.
+\newblock {\em J. Differential Geom.}, 50(3):591--624, 1998.
+
+\bibitem[FKP08]{futer}
+D.~Futer, E.~Kalfagianni, and J.~Purcel.
+\newblock Dehn filling, volume, and the jones polynomial.
+\newblock {\em J. Differential Geom.}, 78(3):429--464, March 2008.
 
 \bibitem[McC18]{mccoy:hyperbolic}
 Duncan McCoy.
 \newblock On the characterising slopes of hyperbolic knots.
 \newblock Available as arXiv:1807.11099, August 2018.
+
+\bibitem[Thu80]{thurston-notes}
+William~P. Thurston.
+\newblock The geometry and topology of three-manifolds.
+\newblock 1978--1980.
 
 \end{thebibliography}
