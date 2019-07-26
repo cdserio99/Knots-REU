@@ -77,9 +77,9 @@
 
 Given a knot $K\subset S^3$, we say that an extended rational number $p/q\in\mathbb{Q}\cup\{\infty\}$ is a {\it characterizing slope} for $K$ if the oriented homeomorphism type of the manifold obtained by $p/q$-surgery on $K$ determines $K$ uniquely up to ambient isotopy. In this paper, we use the symbols $\simeq$ to denote ambient isotopy (which we refer to simply as isotopy) and $\cong$ to denote orientation-preserving homeomorphism. 
 
-In 2018, Duncay McCoy proved that any given hyperbolic knot $K$ has only finitely many non-characterizing slopes $p/q$ with $|q|\geq 3$ \cite{mccoy:hyperbolic}. Thus the probability that a randomly chosen slope $p/q$ is characterizing for $K$ approaches 1 as $|p|+|q|\to\infty$, and almost all surgery slopes are characterizing for such a knot $K$. By contrast, we show that for a large majority of knots with unknotting number one and for many knots with low crossing number, all but finitely many \textit{integer} slopes are non-characterizing.
+In 2018, Duncan McCoy proved that any given hyperbolic knot $K$ has only finitely many non-characterizing slopes $p/q$ with $|q|\geq 3$ \cite{mccoy:hyperbolic}. Thus the probability that a randomly chosen slope $p/q$ is characterizing for $K$ approaches 1 as $|p|+|q|\to\infty$, and almost all surgery slopes are characterizing for such a knot $K$. By contrast, we show that for a large majority of knots with unknotting number one and for many knots with low crossing number, all but finitely many \textit{integer} slopes are non-characterizing.
 
-In Section 2, we strengthen a result of Baker and Motegi, who found conditions to ensure that a knot $K$ has infinitely many integer non-characterizing slopes. In Section 3, we describe an algorithm for determining the integer characterizing slopes of a given knot $K$ satisfying certain conditions. The primary results proven are the following.
+In Section 2, we strengthen a result of Baker and Motegi, who found conditions which ensure that a knot $K$ has infinitely many integer non-characterizing slopes \cite{baker-motegi}. In Section 3, we describe an algorithm for determining the integer characterizing slopes of a given knot $K$ satisfying certain conditions. The primary results proven are the following.
 
 \begin{theorem}\label{thm:unknotting-one} If a knot $K$ has unknotting number $u(K)=1$ and is not a twisted Whitehead double, then $K$ has at most finitely many integer characterizing slopes.
 \end{theorem}
@@ -132,7 +132,7 @@ Note that twist knots are twisted Whitehead doubles, but not all twisted Whitehe
 
 Recall the definition of a surgery dual. When we perform $p/q$-surgery on a knot $K\subset S^3$, we thicken $K$ to obtain a solid torus and remove this solid torus $T$ from $S^3$ and glue in a new solid torus $T'$ in a manner specified by the two integers $p$ and $q$. The core of this new torus yields a new knot $\gamma$, the \textit{surgery dual} of $K$ in the manifold $S^3_{p/q}(K)$. Similarly, since a link is a disjoint union of knots, surgery on a framed link $L =\bigcup^{N}_{i=1} L_i$ in $S^3$ is by removing a disjoint union of solid tori $\bigcup^{N}_{i=1} T_i$ from $S^3$ and gluing in a disjoint union of new solid tori $\bigcup^{N}_{i=1} T'_i$, where $T_i$ is the solid torus to be removed from $S^3$ and $T'_i$ the solid torus to be glued in when doing the corresponding surgery along the link component $L_i$. A surgery dual to $L$ is thus a link $L' = \bigcup^{N}_{i=1} L'_i$, where each component $L'_i$ is the surgery dual to $L_i$ in the surgered manifold that we obtain after doing surgery on $L$.
 
-The following lemma establishes the symmetry of surgical duality for knots.
+The following lemma establishes the symmetry of surgical duality for knots, which we generalize subsequently to an application on a link.
 
 \begin{lemma}
 	Let $K$ be a knot in $S^3$ and $n\in\mathbb{Z}$. Let $\gamma$ be the surgery dual to $K$ in $S^3_n(K)$ and $K'$ be the dual to $\gamma$ in the manifold $Y$ obtained from doing $0$-surgery on $\gamma$ in $S^3_n(K)$. Then $Y\simeq S^3$ and $K\simeq K'$ in $S^3$.
