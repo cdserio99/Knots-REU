@@ -247,7 +247,7 @@ Any link can be described by a partitioned sequence of even numbers called its D
 \end{lemma}
 \begin{proof}
 	This lemma is a direct application of Doll and Hoste's Theorem 1.2 \kh{[CITE]} to our link $L$. As defined, $L$ will always be a nonsplit link whose orientation is irrelevant for the purposes of integral surgery. $R$ and $c$ are two unknots, so $L$ is a prime link if and only if $K$ is a prime knot. That is the single case we are interested in, since only prime knots are classified along with their invariants and diagrams. Thus, by Doll and Hoste, minimal projections of $L$ are in one-to-one correspondence with valid DT codes.
-	Finally, there is a single solution for the question of which of the components is $K$, $R$, and $c$. We use that $c$ is strictly a meridian to $R$, so its only crossings are the two they share. Since the entries on the DT code come from crossings either within a single component or between two different ones, we notice that the code corresponding to the component $c$ will have length 1 (since, by definition of a DT code, only even labeled crossings appear). $R$ also does not have crossings with itself, but it has crossings with $R$ and $c$, so its code has length greater than 1. Moreover, since $K$ is not an unknot, $c(K) \geq 3$, so the code corresponding to $K$ will always be longer than the code corresponding to $R$. Thus, it is clear that $l(K) > l(R) > l(c) = 1$, where $l(X)$ is the code length of the component $X$.
+	Finally, there is a single solution for the question of which of the components is $K$, $R$, and $c$. We use that $c$ is strictly a meridian to $R$, so its only crossings are the two they share. Since the entries on the DT code come from crossings either within a single component or between two different ones, we notice that the code corresponding to the component $c$ will have length 1 (since, by definition of a DT code, only even labeled crossings appear). $R$ also does not have crossings with itself, but it has crossings with $R$ and $c$, so its code has length greater than 1. Moreover, since $K$ is not an unknot, $c(K) \geq 3$, so the code corresponding to $K$ will always be longer than the code corresponding to $R$. Thus, it is clear that $\ell(K) > \ell(R) > \ell(c) = 1$, where $\ell(X)$ is the code length of the component $X$.
 \end{proof}
 
 The script \texttt{integral\char`_slopes.py}, given the DT code of a link $L$ satisfying the conditions above, outputs a list of possible integral characteristic slopes for any knot $K$. It relies on writing a text file, running it on SnapPy, saving the output, and interpreting it repeatedly. There are certain system requirements explicit on the code. The script consists of the following steps:
@@ -274,9 +274,9 @@ All files corresponding to the knots listed in Theorem~\ref{thm:low-crossing} ca
 
 \subsection{Possible extensions of Theorem 1.1}
 
-Theorem~\ref{thm:low-crossing} is stronger than Theorem~\ref{thm:unknotting-one} for low-crossing number knots, since it is valid for knots $K$ such that the unknotting number $u(K) > 1$ and even some Twisted Whitehead Doubles. It suggests that the previous theorem can be extended to encompass a large number of knots than those with $u(K)=1$.
+Theorem~\ref{thm:low-crossing} is stronger than Theorem~\ref{thm:unknotting-one} for low-crossing number knots, since it is valid for knots $K$ with unknotting number $u(K) > 1$, and even for some twisted Whitehead doubles. 
 
-To use Piccirillo's construction, the original band presentation is not necessary. Any link $L' = K\cup R$, where $R$ is a one-handled unknot can receive a meridian $c$ to become the link $L$ described in section~\ref{sec:code}. This link fits Piccirilo's construction, and will yield a non-trivial twist family of knots $K_{n}'$ if and only if $R$ is not a meridian to $K$. As proved, the banded Hopf Link presentation will always yield such $L'$ through a single handle slide, but we have encountered diagrams for this link that do not depend on a band presentation.
+To use Piccirillo's construction, the original band presentation is not necessary. Any link $L' = K\cup R$, where $R$ is a one-handled unknot can receive a meridian $c$ to become the link $L$ described in section~\ref{sec:code}. This link fits Piccirillo's construction, and will yield a non-trivial twist family of knots $K_{n}'$ if and only if $R$ is not a meridian to $K$. As proved, the banded Hopf Link presentation will always yield such $L'$ through a single handle slide, but we have encountered diagrams for this link that do not depend on a band presentation.
 
 We prove parts (b) and (c) of Theorem~\ref{thm:low-crossing} using these diagrams. We could not find an algorithm to produce them, but a few strategies were recurrently successful:
 
@@ -288,7 +288,7 @@ We prove parts (b) and (c) of Theorem~\ref{thm:low-crossing} using these diagram
 
 Such strategies take diagrams for knots we previously find and modify them in order to find analogous for other knots. Whether the two knots related by these operations have any relationship is unknown. If real, such relationship could lead to an algorithm that produces a link $L$ for $J$ with $u(J) > 1$ given the link $L$ for $K$ with $u(K) = 1$. Moreover, using the third strategy we were even successful to find a link $L$ that fits Piccirilo's construction for the twist knot $8_1$.
 
-We now pose a question that would allow us to generalize Theorem~\ref{thm:unknotting-one} for more knots, dropping the assumptions on the unknotting number and the Twisted Whitehead classification.
+We now pose a question that would allow us to generalize Theorem~\ref{thm:unknotting-one} for more knots, dropping the assumptions on the unknotting number and the twisted Whitehead classification.
 
 \kh{[Not sure how to phrase this but I think it could be a good open question from our paper.]}
 \begin{question}
