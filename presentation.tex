@@ -1,0 +1,72 @@
+\documentclass{beamer}
+\usepackage{xypic}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm, bbm}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+%Shortcuts
+\newcommand{\cc}{\mathbb{C}}
+\newcommand{\zz}{\mathbb{Z}}
+\newcommand{\rr}{\mathbb{R}}
+\renewcommand{\sl}{\mathrm{sl}}
+\newcommand{\tb}{\mathrm{tb}}
+\newcommand{\lk}{\mathrm{lk}}
+\newcommand{\st}{{\mathrm{st}}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\pr}{\operatorname{pr}}
+\newcommand{\Symp}{\operatorname{Symp}}
+\newcommand{\Mod}{\operatorname{Mod}}
+\newcommand{\Diff}{\operatorname{Diff}}
+\newcommand{\km}{{\normalfont{(KM)}}}
+\newcommand{\vol}{\operatorname{vol}}
+\newcommand{\defeq}{\mathrel{\vcenter{\baselineskip0.5ex\lineskiplimit0pt\hbox{\scriptsize.}\hbox{\scriptsize.}}}=}
+\newcommand{\hs}{\hspace{0.05em}} % half-space
+
+
+%Environments
+\newtheoremstyle{thm}{15 pt}{10 pt}{\itshape}{}{\bfseries}{.}{.5em}{}
+\newtheorem{thm-main}{Theorem}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem*{thm*}{Theorem}
+\newtheorem*{cor*}{Corollary}
+
+\newtheoremstyle{ex}{10 pt}{10 pt}{\normalfont}{}{\bfseries}{.}{.5em}{}
+\theoremstyle{ex}
+
+\newtheoremstyle{rem}{10 pt}{10 pt}{\normalfont}{}{\it}{.}{.5em}{}
+\theoremstyle{rem}
+\newtheorem{remark}[theorem]{Remark}
+
+
+\title[Integer Characterizing Slopes]{Knot Surgery and Integer Characterizing Slopes}
+\usetheme{Madrid}
+
+\author[Agostini, Chen, Serio, Wang, Wu, and Wu\;\;\;]{Gabriel Agostini, Sophia Chen, Christian Serio, Cecilia Wang, Anton Wu, and Kexin Wu\\
+Advisors: Kyle Hayden and Aliakbar Daemi}
+\institute{Columbia University}
+\date{August 1, 2019}
+
+\begin{document}
+	
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Knots in the 3-sphere}
+		\begin{definition}
+			A \textit{knot} $K$ is the image of a smooth embedding of the circle $S^1$ into the $3$-sphere $S^3$. In particular, $K$ is diffeomorphic to $S^1$.
+		\end{definition}
+		\begin{definition}
+		An \textit{ambient isotopy} of $S^3$ between embeddings $g\!:S^1\to S^3$ and $h\!:S^1\to S^3$ is a continuous map $F\!:S^3\times[0,1]\to S^3$, such that $F_t=F(\cdot,t)$ is a homeomorphism for each $t\in[0,1]$,  $F_0=\mathbbm{1}$, and $F_1\circ g = h$.
+		\end{definition}
+		\begin{itemize}
+		\item We regard two knots $K,K'\subset S^3$ to be equivalent if they differ by an ambient isotopy of $S^3$. We write $K\simeq K'$.
+		\end{itemize}
+	\end{frame}
+
+\end{document}
+
