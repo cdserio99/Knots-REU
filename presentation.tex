@@ -416,11 +416,11 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 			
 			\item We start with a Hopf link $R\cup B$ and slide one component over the other according to the band presentation for $K$.
 			
-			\item Then $R$ remains an unknot, which we rename $c$, and $B$ becomes the knot $K$.
+			\item $R$ remains an unknot, which we rename $c$, and $B$ becomes $K$.
 			
-			\item After adding a meridian to $R$ and sliding $B$ over $R$, we get a diagram that also fits Piccirillo.
-			
-			\item Example: $7_7$
+			\begin{lemma}
+				Let $K\cup c$ be the link obtained by the handle slide above. Then $(0,0)$-surgery on $K\cup c$ gives $S^3$.
+			\end{lemma}
 			
 			\begin{center}
 				\includegraphics[scale=0.4]{k_cup_c_example1}
@@ -429,15 +429,7 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 		\end{itemize}
 	\end{frame}
 
-	\begin{frame}
-		\frametitle{$K\cup c$ for $u(K)=1$ (cont.)}
-		\begin{lemma}
-			Let $K\cup c$ be the link obtained by the handle slide above. Then $(0,0)$-surgery on $K\cup c$ gives $S^3$.
-		\end{lemma}
-		\begin{proof}
-		After the handle slide, the framing of $c$ remains 0, and the framing of $K$ changes by $\pm 2$ depending on the linking number of the Hopf link. If we adjust the framing of the blue component of the Hopf link to $\mp 2$ before the slide, then we see that $(0,0)$-surgery on $K\cup c$ is the same as $(\mp 2,0)$ surgery on a Hopf link. It can be shown that $(n,0)$-surgery on a Hopf link is $S^3$ for any $n\in\mathbb{Z}$.
-		\end{proof}
-	\end{frame}
+	
 
 	\begin{frame}
 		\frametitle{Obtaining $K\cup c$ when $u(K)>1$}
