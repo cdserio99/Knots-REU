@@ -10,10 +10,10 @@
 \newcommand{\cc}{\mathbb{C}}
 \newcommand{\zz}{\mathbb{Z}}
 \newcommand{\rr}{\mathbb{R}}
-\renewcommand{\sl}{\mathrm{sl}}
-\newcommand{\tb}{\mathrm{tb}}
-\newcommand{\lk}{\mathrm{lk}}
-\newcommand{\st}{{\mathrm{st}}}
+\renewcommand{\sl}{\text{sl}}
+\newcommand{\tb}{\text{tb}}
+\newcommand{\lk}{\text{lk}}
+\newcommand{\st}{{\text{st}}}
 \newcommand{\id}{\operatorname{id}}
 \newcommand{\pr}{\operatorname{pr}}
 \newcommand{\Symp}{\operatorname{Symp}}
@@ -58,15 +58,270 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 	\begin{frame}
 		\frametitle{Knots and links in the 3-sphere}
 		\begin{definition}
-			A \textit{knot} $K$ is the image of a smooth embedding of the circle $S^1$ into the $3$-sphere $S^3$. In particular, $K$ is diffeomorphic to $S^1$. A \textit{link} $L$ is a disjoint union of knots.
+			A \textit{knot} $K$ is the image of a smooth embedding of the circle $S^1$ into a 3-manifold, usually the $3$-sphere $S^3$. In particular, $K$ is diffeomorphic to $S^1$. A \textit{link} $L$ is a disjoint union of knots, which may be knotted together.
 		\end{definition}
 		\begin{definition}
-		An \textit{ambient isotopy} of $S^3$ between embeddings $g\!:S^1\to S^3$ and $h\!:S^1\to S^3$ is a continuous map $F\!:S^3\times[0,1]\to S^3$, such that $F_t=F(\cdot,t)$ is a homeomorphism for each $t\in[0,1]$,  $F_0=\mathbbm{1}$, and $F_1\circ g = h$.
+		Let $M,N$ be manifolds and $g,h\!:N\to M$ embeddings. An \textit{ambient isotopy} of $M$ carrying $g$ to $h$ is a continuous map $F\!:M\times[0,1]\to M$, such that $F_t=F(\cdot,t)$ is a homeomorphism of $M$ for each $t\in[0,1]$,  $F_0=\mathbbm{1}$, and $F_1\circ g = h$.
 		\end{definition}
 		\begin{itemize}
 		\item We regard two knots $K,K'\subset S^3$ to be equivalent if they differ by an ambient isotopy of $S^3$. We write $K\simeq K'$.
+		
+		\item Equivalently, we can view knots as subsets of $\mathbb{R}^3$ rather than $S^3$.
+		
 		\end{itemize}
 	\end{frame}
+
+	\begin{frame}
+		\frametitle{Knot diagrams}
+		\begin{itemize}
+			\item We can study a knot $K\subset\mathbb{R}^3$ by projecting it onto a hyperplane $\mathbb{R}^2$.
+			
+			\item If $\pi\!:\mathbb{R}^3\to\mathbb{R}^2$ is a projection such that $\pi(K)$ is an embedded curve except at finitely many \textit{crossing points}, then $\pi(K)$ is a \textit{diagram} for $K$.
+			
+			\item The \textit{crossing number} $c(K)$ is the minimum number of crossings in a diagram of $K$.
+	
+		\end{itemize}
+	
+		\begin{columns}[onlytextwidth]
+			\begin{column}{.4\textwidth}
+				\begin{figure}
+					\includegraphics[width=\textwidth]{examples}
+					\caption{Knots with $c(K)\leq 7$}
+				\end{figure}
+			\end{column}
+			\hfill
+			\begin{column}{.4\textwidth}
+				\begin{figure}
+					\includegraphics[width=\textwidth]{hopf}
+					\caption{Hopf link}
+				\end{figure}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Reidemeister moves}
+		
+		\begin{theorem}[Reidemeister]
+			Two knots $K,K'$ are isotopic if and only if they have diagrams that differ by a sequence of planar isotopies and Reidemeister moves.
+		\end{theorem}
+		
+		\begin{center}
+			\includegraphics[scale=0.7]{reidemeister.jpg}
+		\end{center}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Crossings}
+		\begin{itemize}
+			\item If we orient a knot $K$, then we can define a \textit{sign} for each crossing by the right-hand rule.
+			
+			\item For a two-component link $L=K\cup K'$, the \textit{linking number} $\lk(L)$ is one half the sum of the signs of the crossings between $K$ and $K'$ in a diagram of $L$.
+		\end{itemize}
+	
+		\begin{center}
+			\includegraphics[scale=0.25]{signs}
+		\end{center}
+	\end{frame}
+
+	\begin{frame}
+	\frametitle{Piccirilo's construction: Knots with the same surgery}
+	\begin{theorem}[Piccirilo 2018]
+		Let $L = R \cup G \cup B$ be a surgery diagram for some 3-manifold $Y$ such that:
+		\begin{enumerate}
+			\item $R$ is a zero-framed unknot, $B$ and $G$ have integral framings.
+			\item Ignoring $B$, $R$ is isotopic to a meridian of $G$.
+			\item Ignoring $G$, $R$ is isotopic to a meridian of $B$.
+		\end{enumerate}
+		Then, there exist knots $K$ and $K'$ such that $Y = S^3_{n}(K) = S^3_{n}(K')$.
+	\end{theorem}
+	\begin{itemize}
+		\item Piccirilo's construction comes from an older construction, the \textit{dualizable patterns} construction, to produce knots with the same surgery.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Piccirilo's construction (cont.)}
+	\begin{figure}
+		\begin{center}
+			\includegraphics[width=3in]{picci.png}
+			\caption{Diagram of a link $L$ used by Piccirilo on her original paper. The colors (red, blue, and green) match the component letters $R$, $B$, $G$.}
+		\end{center}
+	\end{figure}
+\end{frame}
+
+
+	\begin{frame}
+		\frametitle{Baker-Motegi: Knots with the same surgery}
+			\begin{itemize}
+				\item We adapted the following construction from Baker and Motegi (2018).
+				
+				\item Let $K$ be a knot, and suppose we can take an unknot $c$ linked with $K$ such that $(0,0)$-surgery on $K\cup c$ is $S^3$.
+				
+				\item Baker-Motegi present a method for producing knots $K_n'$ with $S^3_n(K)\cong S^3_n(K_n')$ from this link.
+				
+				\item Define $K'$ to be the surgery dual to $c$ in $S^3=S^3_{(0,0)}(K\cup c)$.
+				
+				\item Then $K'$ has the same 0-surgery as $K$.
+				
+			\end{itemize}
+		
+			
+	
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Baker-Motegi (cont.)}
+		\begin{itemize}
+			
+			\item Also define $c'$ to be the surgery dual to $K$ in $S^3$.
+			
+			\item After some Kirby calculus, we find that in the surgered manifold $S^3=S^3_{(0,0)}(K\cup c)$, $c'$ is an unknot linked with $K'$.
+			
+			\item Let $K_n'$ be the result of twisting $K'$ through $c'$, $n$ times.
+			
+			\item Then $K_n'$ has the same $n$-surgery as $K$ for all $n$.
+			
+			\item Moreover, if $c$ is not a meridian to $K$, then $K\simeq K_n'$ for at most finitely many $n$.
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Baker-Motegi Illustration}
+		\begin{center}
+			\includegraphics[scale=0.5]{bm}
+		\end{center}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Obtaining a link $K\cup c$ when $u(K)=1$ (Piccirillo)}
+		\begin{itemize}
+			\item In the special case where $K$ has unknotting number one, we can use a band presentation for $K$.
+			
+			\item We start with a Hopf link $R\cup B$ and slide one component over the other according to the band presentation for $K$.
+			
+			\item Then $R$ remains an unknot, which we rename $c$, and $B$ becomes the knot $K$.
+			
+			\item After adding a meridian to $R$ and sliding $B$ over $R$, we get a diagram that also fits Piccirillo.
+			
+			\item Example: $7_7$
+			
+			\begin{center}
+				\includegraphics[scale=0.4]{k_cup_c_example1}
+				\includegraphics[scale=0.4]{k_cup_c_example2}
+			\end{center}
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{$K\cup c$ for $u(K)=1$ (cont.)}
+		\begin{lemma}
+			Let $K\cup c$ be the link obtained by the handle slide above. Then $(0,0)$-surgery on $K\cup c$ gives $S^3$.
+		\end{lemma}
+		\begin{proof}
+		After the handle slide, the framing of $c$ remains 0, and the framing of $K$ changes by $\pm 2$ depending on the linking number of the Hopf link. If we adjust the framing of the blue component of the Hopf link to $\mp 2$ before the slide, then we see that $(0,0)$-surgery on $K\cup c$ is the same as $(\mp 2,0)$ surgery on a Hopf link. It can be shown that $(n,0)$-surgery on a Hopf link is $S^3$ for any $n\in\mathbb{Z}$.
+		\end{proof}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Obtaining $K\cup c$ when $u(K)>1$}
+		
+		\begin{itemize}
+			\item We do not have a systematic way of finding a link $K\cup c$ for a given knot $K$ with $u(K)>1$.
+			
+			\item If we perform multiple slides on a Hopf link, then we obtain a link $K\cup c$ for some knot $K$ with higher unknotting number, but we have no way of predicting what $K$ will be.
+			
+			\item Example: $10_{125}$
+			
+			\begin{center}
+				\includegraphics[scale=0.25]{10_125_1}
+				\includegraphics[scale=0.25]{10_125_2}
+				\includegraphics[scale=0.25]{10_125_3}
+			\end{center}
+		\end{itemize}
+	\end{frame}
+
+\begin{frame}
+	\frametitle{Applications of the construction}
+	\begin{itemize}
+		\item We have produced a banded Hopf link presentation for all the 78 unknotting number one knots $K$ with $c(K)\leq 10$.
+		\item We followed the above procedure to manually produce a diagram for a knot $K'$ that has the same zero-surgery as $K$, using a software called KLO which can perform Kirby calculus on link diagrams.
+		\item Using a software called SnapPy, we were able to verify that whenever $K$ was not a twist knot, $K'$ was not isotopic to $K$. Thus, zero was not a characterizing slope.
+	\end{itemize}
+	\medskip
+	\begin{itemize}
+		\item \textbf{Question:} Can we classify all integer slopes once we have the link $K\cup c$?
+	\end{itemize}
+\end{frame}
+
+
+	\begin{frame}
+	\frametitle{Ruling Out Integer Characterizing Slopes}
+	\begin{itemize}
+		\item We developed an algorithm that can be carried out by a computer script to rule out the integer characterizing slopes of some knot $K$, once we have manually produced the link $L = K \cup c$.
+	\end{itemize}
+	\begin{enumerate}
+		\item Given a link $L$, run SnapPy commands to find out the volume of the knot $K$, the volume of the manifold $Z = S_0^3(c)$, and the length of the Seifert longitude in $Z$.
+		\item Using these values, apply the theorems of hyperbolic Dehn surgery to find the bound $N$ such that any integer $|n| > N$ is a characterizing slope for $K$.
+		\item  For the remaining $2N + 1$ cases, verify if the volume of the knot with the same $n$-surgery as $K$ matches the volume of $K$.
+	\end{enumerate}
+	\begin{itemize}
+		\item We use the \textit{DT code} of the link, which uniquely describes all links that we deal with, up to isotopy.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Findings}
+\begin{theorem}[Low-Crossing Knots]
+	Regarding the integer slopes of knots $K$ such that $c(K) \leq 10$:
+	\begin{itemize}
+		\item If $K$ has unknotting number $u(K) = 1$ and $K$ is not a twist knot, then $K$ has at most \textit{one} integer characterizing slope, namely $\pm 2$.
+		\item If $K$ is the twist knot $8_1$, then $K$ has at most \textit{one} integer characterizing slope, namely $0$.
+		\item If $K$ is one of the $u(K) = 2$ knots $8_4$, $8_6$, $8_{10}$, $8_{12}$, $8_{16}$, $10_{148}$, $10_{149}$, or $10_{150}$, $K$ has no possible integer characterizing slope.
+		\item If $K$ is one of the $u(K) = 2$ knots $8_3$, $10_{125}$, or $10_{126}$, $K$ has at most \textit{one} integer characterizing slope.
+	\end{itemize}
+\end{theorem}
+\end{frame}
+
+
+
+
+	\begin{frame}
+		\frametitle{Proof of Theorem 1 (cont.)}
+		\begin{itemize}
+			\item Recall that  for $K$ with $u(K)=1$, we could obtain a link $K\cup c$ as in Baker-Motegi with $(0,0)$-surgery $S^3$ by sliding over a Hopf link according to the band presentation for $K$.
+			
+			\item It remains to show that if $K$ is not a twisted Whitehead double, then $c$ is not a meridian to $K$ after the handle slide.
+			
+			\item In this case, in any band presentation for $K$, the band must cross the disc bounded by one of the components of the Hopf link.
+			
+		\end{itemize}
+	
+		\begin{lemma}
+			Let $R\cup B$ be a Hopf link, and consider a handle slide of $R$ over $B$ yielding a link $L$ in which $R$ remains a meridian to $B$. Then there exists a handle slide of $R$ over $B$, yielding a link isotopic to $L$, along a band that does not cross either of the discs bounded by $R$ or $B$.
+		\end{lemma}
+	\end{frame}
+
+\begin{frame}
+	\frametitle{Extension of Theorem 1}
+	\begin{itemize}
+		\item How can we drop the condition on Twisted Whitehead Doubles? And on unknotting number?
+		\item Can we produce an algorithm to find links $L = K \cup c$ from handle slides on a Hopf link?
+	\end{itemize}
+	\begin{conjecture}
+		If $K$ is a knot with unknotting number $u(K) = 1$ and $K$ is not a twist knot, then $K$ has at most \textit{one} integer characterizing slope: $\pm 2$.
+	\end{conjecture}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Next Steps}
+	\begin{itemize}
+		\item Rigorously prove the lemma on band presentations.
+		\item Keep experimenting with handle slides in order to expand the list on Theorem 1.2.
+		\item Attempt to use other tools to prove a version of Theorem 1.1 for Twisted Whitehead Doubles.
+		\item Look into our final conjecture.
+	\end{itemize}
+\end{frame}
 
 \end{document}
 
