@@ -187,29 +187,29 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 	\begin{frame}
 		\frametitle{Simple Closed Curves}
 		\begin{definition}
-			A \textit{simple closed curve} (s.c.c) is a submanifold of a smooth manifold $X$, with itself diffeomorphic to $S^1$.
+			A \textit{simple closed curve} (s.c.c.) is a submanifold of a smooth manifold $X$, with itself diffeomorphic to $S^1$.
 		\end{definition}
 		\begin{figure}
 			\centering
 			\includegraphics[width=50mm]{scc.jpg}
 		\end{figure}
 		\begin{itemize}
-		\item By definition, a s.c.c. is embedded in some smooth manifold and is intuitively a $1$-dimensional object diffeomorphic to $S^1$ without any self-intersection. 
-		\item In particular, we can embed s.c.c's in smooth $3$-manifolds such as $S^3$ or a torus $T$. An alternate definition for a knot $K \subset S^3$ is a simple closed curve in it. 
+		\item By definition, a s.c.c. is embedded in some smooth manifold and is intuitively a $1$-dimensional curve diffeomorphic to $S^1$ without any self-intersection. 
+		\item In particular, we can embed s.c.c.'s in a manifold such as a torus $T^2$. An alternate definition for a knot $K \subset S^3$ is a simple closed curve in $S^3$.
 		\end{itemize}
 	\end{frame}	
 
 	\begin{frame}	
-		\frametitle{Embedded S.c.c.'s on a Torus}
+		\frametitle{Embedded s.c.c.'s on $T^2$}
 		\begin{definition}
-			A s.c.c $\gamma \subset T$ is called \textit{non-separating} if $T-\gamma$ is connected.
+			A s.c.c $\gamma \subset T^2$ is called \textit{non-separating} if $T^2-\gamma$ is connected.
 		\end{definition}
 		\begin{itemize}
-		\item Every non-sperating s.c.c. in $T$ bounds a disc.
-		\item Any two oriented and non-separating s.c.c's $\gamma, \gamma' \subset T$ are isotopic if and only if their signed intersection, the sum of their local intersections, is $0$.
+		\item Every non-sperating s.c.c. in $T^2$ bounds a disc.
+		\item Any two oriented and non-separating s.c.c's $\gamma, \gamma' \subset T^2$ are isotopic if and only if their signed intersection, the sum of their local intersections, is $0$.
 		\end{itemize}
 		\begin{definition} 
-			Any two s.c.c's $\gamma, \gamma' \subset T$ form a \textit{basis} if they are non-separating and intersecting in a single point. 
+			Any two s.c.c.'s $\gamma, \gamma' \subset T^2$ form a \textit{basis} if they are non-separating and intersecting in a single point. 
 		\end{definition}
 		\begin{figure}
 			\centering
@@ -218,47 +218,47 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 	\end{frame}
 
 	\begin{frame}
-		\frametitle{Preferred Meridian and Longitude Pair for a knot $K \subset S^3$}
+		\frametitle{Preferred meridian and longitude pair for a knot $K \subset S^3$}
 		\begin{definition} 
-		Given a knot $K \subset S^3$, $N(K) \cong S^1 \times D^2 \cong$ a solid torus $\mathbb{T}$ where $\partial N(K) \cong$ a torus $T$. We define a \textit{meridian} $\mu$ of $K$ to be an unknot $\partial D^2 \times {1} \subset \partial N(K) \cong T$ that bounds a disc which $K$ crosses exactly once. Then we choose a longitude of $K$ as a circle $\lambda = {1} \times S^1 \subset \partial N(K) \cong T$, which is a parallel copy of $K$ on $\partial N(K)$.
+		Given a knot $K \subset S^3$, $N(K) \cong S^1 \times D^2 \cong$ a solid torus $\mathbb{T}$ where $\partial N(K) \cong$ a torus $T^2$, we define a \textit{meridian} $\mu$ of $K$ to be an unknot $\partial D^2 \times {1} \subset \partial N(K) \cong T^2$ that bounds a disc which $K$ crosses exactly once. Then we choose a longitude of $K$ as a circle $\lambda = {1} \times S^1 \subset \partial N(K) \cong T^2$, which is a parallel copy of $K$ on $\partial N(K)$.
 		\end{definition}
 		\begin{figure}
 			\centering
 			\includegraphics[width=60mm]{N(K).jpg}
 		\end{figure}
 		\begin{itemize}
-		\item Note that our choice of the longitude $\lambda$ for $K$ which intersects the meridian $\mu$ non-tangentially in exactly one point and thus ($\mu, \lambda$) form a basis of $T$.
+		\item Note that our choice of the longitude $\lambda$ for $K$ intersects the meridian $\mu$ non-tangentially in exactly one point, and thus ($\mu, \lambda$) form a basis of $T^2$.
 		\end{itemize}
 	\end{frame}	
 
 	\begin{frame}
-		\frametitle{Classification of Isotopy Classes of S.C.C's on a Torus}
+		\frametitle{Isotopy classes of s.c.c.'s on $T^2$}
 		\begin{itemize}
-		\item If a preferred basis of a torus $T$ is $(m, l)$, then any s.c.c $\gamma \subset T$ can be determined (up to isotopy) by two numbers, $p:=|n(\gamma \cap m)|$ and $q:=|n(\gamma \cap l)|$ where $n(a \cap b)$ is the signed intersection between the two oriented simple closed curves $a$ and $b$ on $T$. 
+		\item If a preferred basis of a torus $T^2$ is $(m, l)$, then any s.c.c $\gamma \subset T^2$ can be determined (up to isotopy) by two numbers, $p:=|n(\gamma \cap m)|$ and $q:=|n(\gamma \cap l)|$ where $n(a \cap b)$ is the signed intersection between the two oriented simple closed curves $a$ and $b$ on $T^2$. 
 		\end{itemize}
 		\begin{itemize}
 		\item Further, isotopy classes s.c.c's on a torus are classified by the set of extended rational numbers $\mathbb{Q}\cup\{\infty\}$. 
 		\end{itemize}		
 		\begin{itemize}
-		\item Hence, given a knot $K \in S^3$ where $\partial N(K) \cong$ a torus $T$, any $p/q \in \mathbb{Q}\cup\{\infty\}$ determines a s.c.c $\beta$ on $\partial N(K)$ that is well-defined up to isotopy. Intuitively, $p$ (and $q$ resp.) is the number of of times that $\beta$ goes around the meridian (and longitude resp.) that we choose for $K$. 
+		\item Hence, given a knot $K \in S^3$ where $\partial N(K) \cong$ a torus $T^2$, any $p/q \in \mathbb{Q}\cup\{\infty\}$ determines a s.c.c $\beta$ on $\partial N(K)$ that is well-defined up to isotopy. Intuitively, $p$ (and $q$ resp.) is the number of of times that $\beta$ goes around the meridian (and longitude resp.) that we choose for $K$. 
 		\item We use $\beta$ to define a $3$-manifold $S^3_{p/q}(K)$, called $p/q$-surgery on $K$.
 		\end{itemize}
 	\end{frame}
 
 	\begin{frame}
-		\frametitle{$p/q$-surgery on a Knot: \textit{drilling} then \textit{filling}}
+		\frametitle{Surgery on a knot: \textit{drilling} then \textit{filling}}
 		\begin{definition}
-		Given a knot $K \subset S^3$, the \textit{exterior} of $K$, denoted $X(K)$, is a manifold with boundary obtained by removing the interior of $N(K) = S^1 \times D^2 \cong$ a solid torus $\mathbb{T}$ from $S^3$. Then $\partial X(K) = \partial N(K) \cong$ a torus $T$. Let $\beta$ be the s.c.c on $T$ determined (up to isotopy) by some extended rational number $p/q \in \mathbb{Q}\cup\{\infty\}$. Then the \textit{$p/q$-surgery} on $K$, a $3$-manifold denoted $S^3_{p/q}(K)$, is obtained by gluing another solid torus $\mathbb{T'}$ back to $X(K)$ so that the meridian of $\mathbb{T'}$ is glued to the curve $\beta$. 
+		Given a knot $K \subset S^3$, the \textit{exterior} of $K$, denoted $X(K)$, is a manifold with boundary obtained by removing the interior of $N(K) = S^1 \times D^2 \cong$ a solid torus $\mathbb{T}$ from $S^3$. Then $\partial X(K) = \partial N(K) \cong$ a torus $T^2$. Let $\beta$ be the s.c.c on $T^2$ determined (up to isotopy) by some extended rational number $p/q \in \mathbb{Q}\cup\{\infty\}$. Then the \textit{$p/q$-surgery} on $K$, a $3$-manifold denoted $S^3_{p/q}(K)$, is obtained by gluing another solid torus $\mathbb{T'}$ back to $X(K)$ so that the meridian of $\mathbb{T'}$ is identified with the curve $\beta$. 
 		\end{definition}
 	\end{frame}
 
 	\begin{frame}
-	\frametitle{Examples of $p/q$-surgery on a Knot}
+	\frametitle{Examples of $p/q$-surgery on a knot}
 		\begin{itemize}
 		\item Example: $\pm 1/0$-surgery on a knot $K$ gives back $S^3$ trivially. Thus any nontrivial surgery on a knot $K$ has rational slopes.  			
 		\end{itemize}
 		\begin{itemize}
-		\item Example: $S^3_{1/n}(U) \cong S^3$ where $U$ is an unknot and $n \subset \mathbb{Z}$, which we will see why in a second using a Rolfson twist. 
+		\item Example: $S^3_{1/n}(u) \cong S^3$ where $u$ is an unknot and $n \in \mathbb{Z}$.
 		\end{itemize}
 		\begin{figure}
 			\centering
@@ -267,24 +267,25 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 	\end{frame}
 
 	\begin{frame}
-	\frametitle{Surgery on a Link}
+	\frametitle{Surgery on a link}
 		\begin{definition}
 		Similarly, given a link $L$ in $S^3$ s.t. $\exists p/q \in \mathbb{Q}\cup\{\infty\}$ associated to each component of $L$, we can do surgery on $L$ by doing surgery along each of its component. Any such link is called a \textit{framed} link. 
 		\end{definition}
+	\begin{itemize}
+		\item Example: for any integer $n$, $(n, 0)$-surgery on a Hopf link $K$ yields $S^3$.
+	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[width=30mm]{Hopf.jpg}
+	\end{figure}
 		\begin{theorem}
 		Any oriented, connected $3$-manifold can be obtained by doing surgery along a framed link. So we can think of any $3$-manifold in terms of a diagram for a framed link. Any such diagram is called a \textit{surgery diagram}. 
 		\end{theorem}
-		\begin{itemize}
-		\item Example: for any integer $n$, $(n, 0)$-surgery on a Hopf link $K$ yields $S^3$, which we will see why in a second by a slam dunk. 		
-		\end{itemize}
-		\begin{figure}
-			\centering
-			\includegraphics[width=30mm]{Hopf.jpg}
-		\end{figure}
+		
 	\end{frame}
 
 	\begin{frame}
-	\frametitle{Example of Surgery on a Link}
+	\frametitle{Example of surgery on a link}
 		\begin{theorem}
 		For any integer $n$ and any knot $K$ with an unknot $c$ as its meridian, $(n, 0)$-surgery on $K \cup c$ yields $S^3$. Such a pair of $K$ and $c$ forms a cancelling pair that can be deleted without changing the $3$-manifold described by the surgery diagram.
 		\end{theorem}
@@ -295,7 +296,7 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 	\end{frame}
 
 	\begin{frame}
-	\frametitle{A Surgery Dual to a Knot}
+	\frametitle{Surgery dual to a knot}
 		\begin{itemize}
 		\item Note that $K$ is given by $S^1 \times {0}$ inside $N(K) = S^1 \times D^2 \cong$ a solid torus $\mathbb{T}$. i.e. $K$ is the core curve of the solid torus $N(K)$. 
 		\end{itemize}
@@ -304,12 +305,12 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 			\includegraphics[width=30mm]{core.png}
 		\end{figure}
 		\begin{definition}
-		When doing $p/q$-surgery on a knot $K \in S^3$, the new solid torus $\mathbb{T'} \cong S^1 \times D^2$ that we glue back in $X(K)$ to produce $S^3_{p/q}(K)$ also has a core curve $S^1 \times {0}$, which specifies a knot $\eta$ in $S^3_{p/q}(K)$. Call $\eta$ the \textit{surgery dual} of $K$.
+		When doing $p/q$-surgery on a knot $K \in S^3$, the new solid torus $\mathbb{T'} \cong S^1 \times D^2$ that we glue back in $X(K)$ to produce $S^3_{p/q}(K)$ also has a core curve $S^1 \times {0}$, which specifies a knot $\gamma$ in $S^3_{p/q}(K)$. Call $\gamma$ the \textit{surgery dual} of $K$.
 		\end{definition}		
 	\end{frame}
 
 	\begin{frame}
-	\frametitle{A Surgery Dual to a Knot (Continued)}
+	\frametitle{Surgery dual to a knot (cont.)}
 		\begin{itemize} 
 		\item For any knot $K$ and any integer $n$, the \textit{surgery dual} to $K$ in $S^3_n(K)$ can be represented as a meridian to $K$ in the surgery diagram. 
 		\end{itemize}
@@ -327,7 +328,7 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 	\end{frame}
 
 	\begin{frame}
-	\frametitle{A Surgery Dual Link to a Framed Link}
+	\frametitle{Surgery dual link to a framed link}
 		\begin{definition}
 		A \textit{surgery dual link} to a framed link $L=\bigcup^{N}_{i=1} L_i \in S^3$ is a link $L' = \bigcup^{N}_{i=1} L'_i$, where each component $L'_i$ is the surgery dual to $L_i$ in the surgered manifold $Y$ that we obtain after doing surgery on $L$.
 		\end{definition}
