@@ -41,6 +41,11 @@
 \theoremstyle{rem}
 \newtheorem{remark}[theorem]{Remark}
 
+\AtBeginSection[]
+{\begin{frame}
+	\frametitle{Table of Contents}
+	\tableofcontents[currentsection]
+\end{frame}}
 
 \title[Integer Characterizing Slopes]{Knot Surgery and Integer Characterizing Slopes}
 \usetheme{Madrid}
@@ -56,6 +61,7 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 		\titlepage
 	\end{frame}
 
+\section{Background}
 	\begin{frame}
 		\frametitle{Knots and links in the 3-sphere}
 		\begin{definition}
@@ -336,7 +342,7 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 	
 	%mark of my intro part, where Anton should introduce next Kirby Calculus and integral vs. rational surgery
 
-
+\section{Producing knots with the same surgery}
 	\begin{frame}
 	\frametitle{Piccirillo's construction: Knots with the same surgery}
 	\begin{theorem}[Piccirillo 2018]
@@ -492,6 +498,7 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 \end{theorem}
 \end{frame}
 
+\section{Extending our experimental results}
 	\begin{frame}
 		\frametitle{Main theorem}
 		\begin{theorem}
