@@ -125,6 +125,68 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 		\end{center}
 	\end{frame}
 
+\begin{frame}
+	\frametitle{Unknotting number and band move}
+	\begin{definition}
+		The \textit{unknotting number} $u(K)$ of a knot $K$ is the minimal number of crossing changes that are required to change some diagram of $K$ into a diagram of the unknot.
+	\end{definition}
+	\begin{itemize}
+		\item If $u(K)$=0, then $K$ is an unknot.
+	\end{itemize}
+	\begin{definition}
+		Let $K$ be any knot(or link) in $S^3$ and let $b \subset S^3$ be any embedded band where one pair of sides lie along arcs in $K$ and where $b$ is otherwise disjoint from $K$. Join $K$ to itself by deleting the arcs $K \cap b$ and adding the arcs forming the other side of $b$. The resulting knot(or link) $K'$ is obtained from $K$ by a \textit{band move} along $b$.
+	\end{definition}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Example of band move and band presentation}
+	\begin{itemize}
+		\item Example of band move:
+		
+		The Stevedore knot $6_1$ is obtained from a band move on two unknots:
+		\begin{figure}
+			\hspace*{-1.5cm}\begin{center}{\includegraphics [width=8cm] {bandmove}}\end{center}
+		\end{figure}
+	\end{itemize}
+	\begin{itemize}
+		\item If $K$ can be obtained from another knot(or link) $K'$ by a single band move, then we say K has a \textit{band presentation}.
+	\end{itemize}
+	\begin{itemize}
+		\item If $K$ can be obtained from a Hopf link by a single band move, then K has a \textit{banded Hopf link presentation}.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Example of banded Hopf link presentation}
+	\begin{theorem}
+		If $K$ has $u(K)=1$, then it is obtained from the Hopf link by a single band move. 
+	\end{theorem}
+	\begin{itemize}
+		\item Example: banded Hopf link presentation of Trefoil:
+		\begin{figure}
+			\begin{center}{\includegraphics [width=10cm] {trefoil}}\end{center}
+		\end{figure}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Twist knots and Twisted whitehead double}
+	\begin{definition}
+		A \textit{twist knot} $K$ is a knot obtained by repeatedly twisting an unknot and linking the ends together.
+	\end{definition}
+		\begin{figure}
+			{\includegraphics[scale=0.6] {twistknot}}
+		\end{figure}
+	\begin{definition}
+		A knot $K$ is a \textit{twisted Whitehead double} if there exists a band presentation for K in which the band does not cross either component of the Hopf link. 
+	\end{definition}
+	\begin{itemize}
+		\item Note: twist knots are twisted Whitehead doubles, but not all twisted Whitehead doubles are twist knots.
+	\end{itemize}
+\end{frame}
+
+
+
 	\begin{frame}
 	\frametitle{Piccirillo's construction: Knots with the same surgery}
 	\begin{theorem}[Piccirillo 2018]
@@ -133,7 +195,7 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 			\item $R$ is a zero-framed unknot, $B$ and $G$ have integral framings.
 			\item Ignoring $B$, $R$ is isotopic to a meridian of $G$.
 			\item Ignoring $G$, $R$ is isotopic to a meridian of $B$.
-			\item $B$ and $G$ have linking number 0.
+			\item $B$ and $G$ have linking number $0$.
 		\end{enumerate}
 		Then, there exist knots $K$ and $K'$ such that $Y \cong S^3_{n}(K) \cong S^3_{n}(K')$.
 	\end{theorem}
@@ -181,6 +243,8 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 			\item After some Kirby calculus, we find that in the surgered manifold $S^3=S^3_{(0,0)}(K\cup c)$, $c'$ is an unknot linked with $K'$.
 			
 			\item Let $K_n'$ be the result of twisting $K'$ through $c'$, $n$ times.
+			
+			\item We say that $\{K_n'\}$ forms a \textit{twist family}.
 			
 			\item Then $K_n'$ has the same $n$-surgery as $K$ for all $n$.
 			
@@ -249,10 +313,11 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 		\item We have produced a banded Hopf link presentation for all the 78 unknotting number one knots $K$ with $c(K)\leq 10$.
 		\item We followed the above procedure to manually produce a diagram for a knot $K'$ that has the same zero-surgery as $K$, using a software called KLO which can perform Kirby calculus on link diagrams.
 		\item Using a software called SnapPy, we were able to verify that whenever $K$ was not a twist knot, $K'$ was not isotopic to $K$. Thus, zero was not a characterizing slope.
+		\item We can use a similar process to check whether any integer slope is characterizing.
 	\end{itemize}
 	\medskip
 	\begin{itemize}
-		\item \textbf{Question:} Can we classify all integer slopes once we have the link $K\cup c$?
+		\item \textbf{Question:} Can we classify all integer slopes once we have the link $K\cup c$, with finitely many computations?
 	\end{itemize}
 \end{frame}
 
