@@ -31,6 +31,8 @@
 \newtheorem{thm-main}{Theorem}
 \newtheorem{conjecture}[theorem]{Conjecture}
 \newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{theorem1}[theorem]{Theorem 1}
+\newtheorem{theorem2}[theorem]{Theorem 2}
 \newtheorem*{thm*}{Theorem}
 \newtheorem*{cor*}{Corollary}
 
@@ -136,16 +138,7 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 		The \textit{unknotting number} $u(K)$ of a knot $K$ is the minimal number of crossing changes that are required to change some diagram of $K$ into a diagram of the unknot.
 	\end{definition}
 	\begin{itemize}
-		\item If $u(K)$=0, then $K$ is an unknot.
-	\end{itemize}
-	\begin{definition}
-		Let $K$ be any knot(or link) in $S^3$ and let $b \subset S^3$ be any embedded band where one pair of sides lie along arcs in $K$ and where $b$ is otherwise disjoint from $K$. Join $K$ to itself by deleting the arcs $K \cap b$ and adding the arcs forming the other side of $b$. The resulting knot(or link) $K'$ is obtained from $K$ by a \textit{band move} along $b$.
-	\end{definition}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Example of band move and band presentation}
-	\begin{itemize}
+		
 		\item Example of band move:
 		
 		The Stevedore knot $6_1$ is obtained from a band move on two unknots:
@@ -153,23 +146,22 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 			\hspace*{-1.5cm}\begin{center}{\includegraphics [width=8cm] {bandmove}}\end{center}
 		\end{figure}
 	\end{itemize}
-	\begin{itemize}
-		\item If $K$ can be obtained from another knot(or link) $K'$ by a single band move, then we say K has a \textit{band presentation}.
-	\end{itemize}
-	\begin{itemize}
-		\item If $K$ can be obtained from a Hopf link by a single band move, then K has a \textit{banded Hopf link presentation}.
-	\end{itemize}
+	
 \end{frame}
+
 
 \begin{frame}
 	\frametitle{Example of banded Hopf link presentation}
+	\begin{itemize}
+		\item If $K$ can be obtained from a Hopf link by a single band move, then K has a \textit{banded Hopf link presentation}.
+	\end{itemize}
 	\begin{theorem}
 		If $K$ has $u(K)=1$, then it is obtained from the Hopf link by a single band move. 
 	\end{theorem}
 	\begin{itemize}
 		\item Example: banded Hopf link presentation of Trefoil:
 		\begin{figure}
-			\begin{center}{\includegraphics [width=10cm] {trefoil}}\end{center}
+			\begin{center}{\includegraphics [scale=0.3] {trefoil}}\end{center}
 		\end{figure}
 	\end{itemize}
 \end{frame}
@@ -177,168 +169,77 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 	\begin{frame}
 		\frametitle{Twist knots and Twisted whitehead double}
 		\begin{definition}
+			A knot $K$ is a \textit{twisted Whitehead double} if there exists a band presentation for K in which the band does not cross either component of the Hopf link. 
+		\end{definition}
+		\begin{definition}
 			A \textit{twist knot} $K$ is a knot obtained by repeatedly twisting an unknot and linking the ends together.
 		\end{definition}
 			\begin{figure}
 				{\includegraphics[scale=0.6] {twistknot}}
 			\end{figure}
-		\begin{definition}
-			A knot $K$ is a \textit{twisted Whitehead double} if there exists a band presentation for K in which the band does not cross either component of the Hopf link. 
-		\end{definition}
+		
 		\begin{itemize}
 			\item Note: twist knots are twisted Whitehead doubles, but not all twisted Whitehead doubles are twist knots.
 		\end{itemize}
 	\end{frame}
 
-	\begin{frame}
-		\frametitle{Simple Closed Curves}
-		\begin{definition}
-			A \textit{simple closed curve} (s.c.c.) is a submanifold of a smooth manifold $X$, with itself diffeomorphic to $S^1$.
-		\end{definition}
-		\begin{figure}
-			\centering
-			\includegraphics[width=50mm]{scc.jpg}
-		\end{figure}
-		\begin{itemize}
-		\item By definition, a s.c.c. is embedded in some smooth manifold and is intuitively a $1$-dimensional curve diffeomorphic to $S^1$ without any self-intersection. 
-		\item In particular, we can embed s.c.c.'s in a manifold such as a torus $T^2$. An alternate definition for a knot $K \subset S^3$ is a simple closed curve in $S^3$.
-		\end{itemize}
-	\end{frame}	
 
-	\begin{frame}	
-		\frametitle{Embedded s.c.c.'s on $T^2$}
-		\begin{definition}
-			A s.c.c. $\gamma \subset T^2$ is called \textit{non-separating} if $T^2-\gamma$ is connected.
-		\end{definition}
-		\begin{itemize}
-		\item Every non-sperating s.c.c. in $T^2$ bounds a disc.
-		\item Any two oriented and non-separating s.c.c's $\gamma, \gamma' \subset T^2$ are isotopic if and only if their signed intersection, the sum of their local intersections, is $0$.
-		\end{itemize}
-		\begin{definition} 
-			Any two s.c.c.'s $\gamma, \gamma' \subset T^2$ form a \textit{basis} if they are non-separating and intersecting in a single point. 
-		\end{definition}
-		\begin{figure}
-			\centering
-			\includegraphics[width=60mm]{Separating.jpg}
-		\end{figure}
-	\end{frame}
 
 	\begin{frame}
 		\frametitle{Preferred meridian and longitude pair for a knot $K \subset S^3$}
 		\begin{definition} 
-		Given a knot $K \subset S^3$, $N(K) \cong S^1 \times D^2 \cong$ a solid torus $\mathbb{T}$ where $\partial N(K) \cong$ a torus $T^2$, we define a \textit{meridian} $\mu$ of $K$ to be an unknot $\partial D^2 \times {1} \subset \partial N(K) \cong T^2$ that bounds a disc which $K$ crosses exactly once. Then we choose a longitude of $K$ as a circle $\lambda = {1} \times S^1 \subset \partial N(K) \cong T^2$, which is a parallel copy of $K$ on $\partial N(K)$.
+		Let $K \subset S^3$ be a knot, and let $N(K)$ be tubular neighborhood of $K$. Then $N(K)$ is a solid torus $\mathbb{T}$, and $\partial N(K)$ is a torus $T^2$. We define a \textit{meridian} $\mu$ of $K$ to be an unknot lying on $\partial N(K)$ that bounds a disc which $K$ crosses exactly once. A \textit{longitude} $\lambda$ of $K$ is a parallel copy of $K$ on $\partial N(K)$.
 		\end{definition}
 		\begin{figure}
 			\centering
 			\includegraphics[width=60mm]{N(K).jpg}
 		\end{figure}
-		\begin{itemize}
-		\item Note that our choice of the longitude $\lambda$ for $K$ intersects the meridian $\mu$ non-tangentially in exactly one point, and thus ($\mu, \lambda$) form a basis of $T^2$.
-		\end{itemize}
+		
 	\end{frame}	
 
 	\begin{frame}
-		\frametitle{Isotopy classes of s.c.c.'s on $T^2$}
+		\frametitle{Isotopy classes of curves on $T^2$}
+		
+			
 		\begin{itemize}
-		\item If a preferred basis of a torus $T^2$ is $(m, l)$, then any s.c.c $\gamma \subset T^2$ can be determined (up to isotopy) by two numbers, $p:=|n(\gamma \cap m)|$ and $q:=|n(\gamma \cap l)|$ where $n(a \cap b)$ is the signed intersection between the two oriented simple closed curves $a$ and $b$ on $T^2$. 
-		\end{itemize}
-		\begin{itemize}
-		\item Further, isotopy classes s.c.c's on a torus are classified by the set of extended rational numbers $\mathbb{Q}\cup\{\infty\}$. 
-		\end{itemize}		
-		\begin{itemize}
-		\item Hence, given a knot $K \in S^3$ where $\partial N(K) \cong$ a torus $T^2$, any $p/q \in \mathbb{Q}\cup\{\infty\}$ determines a s.c.c $\beta$ on $\partial N(K)$ that is well-defined up to isotopy. Intuitively, $p$ (and $q$ resp.) is the number of of times that $\beta$ goes around the meridian (and longitude resp.) that we choose for $K$. 
+		\item Given a knot $K \in S^3$ where $\partial N(K) \cong$ a torus $T^2$, any $p/q \in \mathbb{Q}\cup\{\infty\}$ determines a curve $\beta$ on $\partial N(K)$ that is well-defined up to isotopy. Intuitively, $p$ (and $q$ resp.) is the number of of times that $\beta$ goes around the meridian (and longitude resp.) that we choose for $K$. 
 		\item We use $\beta$ to define a $3$-manifold $S^3_{p/q}(K)$, called $p/q$-surgery on $K$.
 		\end{itemize}
+		\begin{figure}
+			\includegraphics[scale=0.2]{torusknot}
+		\end{figure}
 	\end{frame}
 
 	\begin{frame}
 		\frametitle{Surgery on a knot: \textit{drilling} then \textit{filling}}
 		\begin{definition}
-		Given a knot $K \subset S^3$, the \textit{exterior} of $K$, denoted $X(K)$, is a manifold with boundary obtained by removing the interior of $N(K) = S^1 \times D^2 \cong$ a solid torus $\mathbb{T}$ from $S^3$. Then $\partial X(K) = \partial N(K) \cong$ a torus $T^2$. Let $\beta$ be the s.c.c on $T^2$ determined (up to isotopy) by some extended rational number $p/q \in \mathbb{Q}\cup\{\infty\}$. Then the \textit{$p/q$-surgery} on $K$, a $3$-manifold denoted $S^3_{p/q}(K)$, is obtained by gluing another solid torus $\mathbb{T'}$ back to $X(K)$ so that the meridian of $\mathbb{T'}$ is identified with the curve $\beta$. 
+		Given a knot $K \subset S^3$, the \textit{exterior} of $K$, denoted $X(K)$, is a manifold with boundary obtained by removing the interior of $N(K) = S^1 \times D^2 \cong$ a solid torus $\mathbb{T}$ from $S^3$. Then $\partial X(K) = \partial N(K) \cong$ a torus $T^2$. Let $\beta$ be the knot on $T^2$ determined (up to isotopy) by some extended rational number $p/q \in \mathbb{Q}\cup\{\infty\}$. Then the \textit{$p/q$-surgery} on $K$, a $3$-manifold denoted $S^3_{p/q}(K)$, is obtained by gluing another solid torus $\mathbb{T'}$ back to $X(K)$ so that the meridian of $\mathbb{T'}$ is identified with the curve $\beta$. 
 		\end{definition}
+	\begin{itemize}
+		\item We call $p/q$ the \textit{surgery slope}.
+	\end{itemize}
 	\end{frame}
 
-	\begin{frame}
-	\frametitle{Examples of $p/q$-surgery on a knot}
-		\begin{itemize}
-		\item Example: $\pm 1/0$-surgery on a knot $K$ gives back $S^3$ trivially. Thus any nontrivial surgery on a knot $K$ has rational slopes.  			
-		\end{itemize}
-		\begin{itemize}
-		\item Example: $S^3_{1/n}(u) \cong S^3$ where $u$ is an unknot and $n \in \mathbb{Z}$.
-		\end{itemize}
-		\begin{figure}
-			\centering
-			\includegraphics[width=30mm]{Unknot.jpg}
-		\end{figure}	
-	\end{frame}
+	
 
 	\begin{frame}
 	\frametitle{Surgery on a link}
 		\begin{definition}
 		Similarly, given a link $L$ in $S^3$ s.t. $\exists p/q \in \mathbb{Q}\cup\{\infty\}$ associated to each component of $L$, we can do surgery on $L$ by doing surgery along each of its component. Any such link is called a \textit{framed} link. 
 		\end{definition}
-	\begin{itemize}
-		\item Example: for any integer $n$, $(n, 0)$-surgery on a Hopf link $K$ yields $S^3$.
-	\end{itemize}
-	\begin{figure}
-		\centering
-		\includegraphics[width=30mm]{Hopf.jpg}
-	\end{figure}
+	
+	
 		\begin{theorem}
 		Any oriented, connected $3$-manifold can be obtained by doing surgery along a framed link. So we can think of any $3$-manifold in terms of a diagram for a framed link. Any such diagram is called a \textit{surgery diagram}. 
 		\end{theorem}
 		
 	\end{frame}
 
-	\begin{frame}
-	\frametitle{Example of surgery on a link}
-		\begin{theorem}
-		For any integer $n$ and any knot $K$ with an unknot $c$ as its meridian, $(n, 0)$-surgery on $K \cup c$ yields $S^3$. Such a pair of $K$ and $c$ forms a cancelling pair that can be deleted without changing the $3$-manifold described by the surgery diagram.
-		\end{theorem}
-		\begin{figure}
-			\centering
-			\includegraphics[width=50mm]{Kc.jpg}
-		\end{figure}
-	\end{frame}
+	
 
-	\begin{frame}
-	\frametitle{Surgery dual to a knot}
-		\begin{itemize}
-		\item Note that $K$ is given by $S^1 \times {0}$ inside $N(K) = S^1 \times D^2 \cong$ a solid torus $\mathbb{T}$. i.e. $K$ is the core curve of the solid torus $N(K)$. 
-		\end{itemize}
-		\begin{figure}
-			\centering
-			\includegraphics[width=30mm]{core.png}
-		\end{figure}
-		\begin{definition}
-		When doing $p/q$-surgery on a knot $K \in S^3$, the new solid torus $\mathbb{T'} \cong S^1 \times D^2$ that we glue back in $X(K)$ to produce $S^3_{p/q}(K)$ also has a core curve $S^1 \times {0}$, which specifies a knot $\gamma$ in $S^3_{p/q}(K)$. Call $\gamma$ the \textit{surgery dual} of $K$.
-		\end{definition}		
-	\end{frame}
+	
 
-	\begin{frame}
-	\frametitle{Surgery dual to a knot (cont.)}
-		\begin{itemize} 
-		\item For any knot $K$ and any integer $n$, the \textit{surgery dual} to $K$ in $S^3_n(K)$ can be represented as a meridian to $K$ in the surgery diagram. 
-		\end{itemize}
-		\begin{figure}
-			\centering
-			\includegraphics[width=25mm]{dual.png}
-		\end{figure}
-		\begin{lemma}
-		Surgery duality for knots in $S^3$ is symmetric. 
-		\end{lemma}
-		\begin{figure}
-			\centering
-			\includegraphics[width=50mm]{Symmetry.jpg}
-		\end{figure}
-	\end{frame}
-
-	\begin{frame}
-	\frametitle{Surgery dual link to a framed link}
-		\begin{definition}
-		A \textit{surgery dual link} to a framed link $L=\bigcup^{N}_{i=1} L_i \in S^3$ is a link $L' = \bigcup^{N}_{i=1} L'_i$, where each component $L'_i$ is the surgery dual to $L_i$ in the surgered manifold $Y$ that we obtain after doing surgery on $L$.
-		\end{definition}
-	\end{frame}
+	
 	
 	\begin{frame}
 		\frametitle{Kirby calculus}
@@ -389,8 +290,69 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 			\includegraphics[width=\textwidth]{slamdunk}
 		\end{figure}
 	\end{frame}
+
+\begin{frame}
+	\frametitle{Examples of surgery}
+	\begin{itemize}
+		\item Example: $\pm 1/0$-surgery on a knot $K$ gives back $S^3$ trivially. Thus any nontrivial surgery on a knot $K$ has rational slopes.  			
+	\end{itemize}
+	\begin{itemize}
+		\item Example: $S^3_{1/n}(u) \cong S^3$ where $u$ is an unknot and $n \in \mathbb{Z}$.
+			\item Example: for any integer $n$, $(n, 0)$-surgery on a Hopf link $K$ yields $S^3$.
+	\end{itemize}
+\begin{figure}
+	\centering
+	\includegraphics[width=30mm]{Hopf.jpg}
+\end{figure}
+		
+\end{frame}
+
+\begin{frame}
+	\frametitle{Lightbulb trick}
+	\begin{theorem}
+		For any integer $n$ and any knot $K$ with an unknot $c$ as its meridian, $(n, 0)$-surgery on $K \cup c$ yields $S^3$. Such a pair of $K$ and $c$ forms a cancelling pair that can be deleted without changing the $3$-manifold described by the surgery diagram.
+	\end{theorem}
+	\begin{figure}
+		\centering
+		\includegraphics[width=50mm]{Kc.jpg}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Surgery dual to a knot}
+	\begin{itemize}
+		\item Note that $K$ is given by $S^1 \times {0}$ inside $N(K) = S^1 \times D^2 \cong$ a solid torus $\mathbb{T}$. i.e. $K$ is the core curve of the solid torus $N(K)$. 
+	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[width=30mm]{core.png}
+	\end{figure}
+	\begin{definition}
+		When doing $p/q$-surgery on a knot $K \in S^3$, the new solid torus $\mathbb{T'} \cong S^1 \times D^2$ that we glue back in $X(K)$ to produce $S^3_{p/q}(K)$ also has a core curve $S^1 \times {0}$, which specifies a knot $\gamma$ in $S^3_{p/q}(K)$. Call $\gamma$ the \textit{surgery dual} of $K$.
+	\end{definition}		
+\end{frame}
+
+\begin{frame}
+	\frametitle{Surgery dual to a knot (cont.)}
+	\begin{itemize} 
+		\item For any knot $K$ and any integer $n$, the \textit{surgery dual} to $K$ in $S^3_n(K)$ can be represented as a meridian to $K$ in the surgery diagram. 
+	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[width=25mm]{dual.png}
+	\end{figure}
+	\begin{lemma}
+		Surgery duality for knots in $S^3$ is symmetric. 
+	\end{lemma}
+	\begin{figure}
+		\centering
+		\includegraphics[width=50mm]{Symmetry.jpg}
+	\end{figure}
+\end{frame}
+
+
 	
-\section{Producing knots with the same surgery}
+\section{Goals and results: Producing knots with the same surgery}
 	\begin{frame}
 	\frametitle{Piccirillo's construction: Knots with the same surgery}
 	\begin{theorem}[Piccirillo 2018]
@@ -508,30 +470,43 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 	\begin{itemize}
 		\item We have produced a banded Hopf link presentation for all the 78 unknotting number one knots $K$ with $c(K)\leq 10$.
 		\item We followed the above procedure to manually produce a diagram for a knot $K'$ that has the same zero-surgery as $K$, using a software called KLO which can perform Kirby calculus on link diagrams.
+	\end{itemize}
+\end{frame}
+
+	\begin{frame}
+		\frametitle{Applications (cont.)}
+		
+	\begin{itemize}
 		\item Using a software called SnapPy, we were able to verify that whenever $K$ was not a twist knot, $K'$ was not isotopic to $K$. Thus, zero was not a characterizing slope.
 		\item We can use a similar process to check whether any integer slope is characterizing.
 	\end{itemize}
-	\medskip
+\begin{definition}
+	Let $K$ be a knot. Then $p/q$ is a \textit{characterizing slope} for $K$ if $S^3_{p/q}(K')$ is not homeomorphic to $S^3_{p/q}(K)$ for any knot $K'\ne K$.
+\end{definition}
+	
 	\begin{itemize}
 		\item \textbf{Question:} Can we classify all integer slopes once we have the link $K\cup c$, with finitely many computations?
 	\end{itemize}
 \end{frame}
 
 	\begin{frame}
-		\frametitle{Characterizing slopes}
+		\frametitle{Known results on characterizing slopes}
 		\begin{itemize}
-		\item Let $K$ be a knot. Then $p/q$ is a \textit{characterizing slope} for $K$ if $S^3_{p/q}(K')$ is not homeomorphic to $S^3_{p/q}(K)$ for any knot $K'\ne K$.
-		\pause
-		\item The following theorem shows that for a certain type of knot, most rational slopes are characterizing.
+		
+		\item The following theorem shows that for a most knot, most rational slopes are characterizing.
 		\end{itemize}
 		\pause
-		\begin{theorem}[Ni--Zhang, 2014]
-			For the torus knot $T_{r,s}$, any slope $p/q>\frac{30}{67}\hs(r^2-1)(s^2-1)$ is characterizing.
+		\begin{theorem}[McCoy, 2018]
+			If $K$ is a hyperbolic knot, then $K$ has only finitely many non-characterizing slopes $p/q$ with $|q|\geq 3$. Moreover, the probability that a randomly chosen slope $p/q$ is characterizing for $K$ approaches 1 as $|p|+|q|\to\infty$.
 		\end{theorem}
+	
+	\begin{itemize}
+		\item Moreover, it was proven by Ozsv\'{a}th and Szab\'{o} (2006) that all slopes are characterizing for the trefoil and figure-eight knot (twist knots).
+	\end{itemize}
 	\end{frame}
 	
 	\begin{frame}
-		\frametitle{Characterizing slopes}
+		\frametitle{Results (cont.)}
 		\begin{itemize}
 		\item However, the next theorem shows that for a certain type of knot, there are infinitely many non-characterizing slopes.
 		\end{itemize}
@@ -541,24 +516,28 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 		\end{theorem}
 		\pause
 		\begin{itemize}
-		\item Our work shows that for a certain type of knot, most integer slopes are non-characterizing!
+		\item Our work shows that for knots satisfying reasonable conditions, most integer slopes are non-characterizing!
 		\end{itemize}
 	\end{frame}
 	
 	\begin{frame}
 		\frametitle{Our results}
-		\begin{theorem}
-			\begin{enumerate}
-				\item If $K$ has unknotting number $u(K)=1$ and $K$ is not a twist knot, then $K$ has at most one integer characterizing slope, namely $\pm 2$.
-				\item If $K$ is one of the knots $8_4$, $8_6$, $8_{10}$, or $8_{12}$, then $K$ has $u(K)>1$ and has no integer characterizing slopes.
-				\item If $K$ is the twist knot $8_1$, then $K$ has at most one integer characterizing slope, namely $0$.
-			\end{enumerate}
-		\end{theorem}
+		\begin{theorem1}
+			Regarding the integer slopes of knots $K$ such that $c(K) \leq 10$:
+			\begin{itemize}
+				\item If $K$ has unknotting number $u(K) = 1$ and $K$ is not a twist knot, then $K$ has at most \textit{one} integer characterizing slope, namely $\pm 2$.
+				\item If $K$ is the twist knot $8_1$, then $K$ has at most \textit{one} integer characterizing slope, namely $0$.
+				\item If $K$ is one of the $u(K) = 2$ knots $8_4$, $8_6$, $8_{10}$, $8_{12}$, $8_{16}$, $10_{148}$, $10_{149}$, or $10_{150}$, $K$ has no possible integer characterizing slope.
+				\item If $K$ is one of the $u(K) = 2$ knots $8_3$, $10_{125}$, or $10_{126}$, $K$ has at most \textit{one} integer characterizing slope.
+			\end{itemize}
+		\end{theorem1}
 		\pause
-		\begin{theorem}
+		\begin{theorem2}
 			If a knot $K$ has unknotting number $u(K)=1$ and is not a twisted Whitehead double, then $K$ has at most finitely many integer characterizing slopes.
-		\end{theorem}
+		\end{theorem2}
 	\end{frame}
+	
+	\section{Proof of Theorem 1}
 	
 	\begin{frame}
 		\frametitle{Hyperbolic Dehn surgery}
@@ -597,14 +576,20 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 	\end{frame}
 	
 	\begin{frame}
-		\frametitle{Sketch of proof of Theorem}
-		\begin{theorem}
-			If a knot $K$ has unknotting number $u(K)=1$ and is not a twisted Whitehead double, then $K$ has at most finitely many integer characterizing slopes.
-		\end{theorem}
+		\frametitle{Sketch of proof of Theorem 1}
+		\begin{theorem1}
+			Regarding the integer slopes of knots $K$ such that $c(K) \leq 10$:
+			\begin{itemize}
+				\item If $K$ has unknotting number $u(K) = 1$ and $K$ is not a twist knot, then $K$ has at most \textit{one} integer characterizing slope, namely $\pm 2$.
+				\item If $K$ is the twist knot $8_1$, then $K$ has at most \textit{one} integer characterizing slope, namely $0$.
+				\item If $K$ is one of the $u(K) = 2$ knots $8_4$, $8_6$, $8_{10}$, $8_{12}$, $8_{16}$, $10_{148}$, $10_{149}$, or $10_{150}$, $K$ has no possible integer characterizing slope.
+				\item If $K$ is one of the $u(K) = 2$ knots $8_3$, $10_{125}$, or $10_{126}$, $K$ has at most \textit{one} integer characterizing slope.
+			\end{itemize}
+		\end{theorem1}
 	\end{frame}
 	
 	\begin{frame}
-		\frametitle{Sketch of proof of Theorem}
+		\frametitle{Proof of Theorem 1 (cont.)}
 		\begin{itemize}
 			\item Following Baker--Motegi, we can produce a link $(K\cup c)\subset S^3$, where $c$ is an unknot which is not a meridian to $K$ such that $(0,\hs0)$-surgery on $K\cup c$ yields $S^3$.
 			\pause
@@ -626,7 +611,7 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 	\end{frame}
 
 	\begin{frame}
-	\frametitle{Ruling Out Integer Characterizing Slopes}
+	\frametitle{Ruling out integer characterizing slopes}
 	\begin{itemize}
 		\item We developed an algorithm that can be carried out by a computer script to rule out the integer characterizing slopes of some knot $K$, once we have manually produced the link $L = K \cup c$.
 	\end{itemize}
@@ -640,29 +625,19 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 	\end{itemize}
 \end{frame}
 
-\begin{frame}
-\frametitle{Findings}
-\begin{theorem}[Low-Crossing Knots]
-	Regarding the integer slopes of knots $K$ such that $c(K) \leq 10$:
-	\begin{itemize}
-		\item If $K$ has unknotting number $u(K) = 1$ and $K$ is not a twist knot, then $K$ has at most \textit{one} integer characterizing slope, namely $\pm 2$.
-		\item If $K$ is the twist knot $8_1$, then $K$ has at most \textit{one} integer characterizing slope, namely $0$.
-		\item If $K$ is one of the $u(K) = 2$ knots $8_4$, $8_6$, $8_{10}$, $8_{12}$, $8_{16}$, $10_{148}$, $10_{149}$, or $10_{150}$, $K$ has no possible integer characterizing slope.
-		\item If $K$ is one of the $u(K) = 2$ knots $8_3$, $10_{125}$, or $10_{126}$, $K$ has at most \textit{one} integer characterizing slope.
-	\end{itemize}
-\end{theorem}
-\end{frame}
 
-\section{Extending our experimental results}
+
+\section{Proof of Theorem 2}
 	\begin{frame}
-		\frametitle{Main theorem}
-		\begin{theorem}
+		\frametitle{Theorem 2}
+		\begin{theorem2}
 			If a knot $K$ has unknotting number $u(K)=1$ and is not a twisted Whitehead double, then $K$ has at most finitely many integer characterizing slopes.
-		\end{theorem}
+		\end{theorem2}
 	\end{frame}
+		
 
 	\begin{frame}
-		\frametitle{Proof of theorem}
+		\frametitle{Proof sketch of Theorem 2}
 		\begin{proposition}
 			Let $K$ be a knot in $S^3$. Suppose we can take an unknot $c$ linked with $K$ so that $(0,0)$-surgery on $K\cup c$ yields $S^3$ and $c$ is not a meridian of $K$. Then $K$ has at most finitely many integer characterizing slopes.
 		\end{proposition}
@@ -675,7 +650,7 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 
 
 	\begin{frame}
-		\frametitle{Proof of theorem (cont.)}
+		\frametitle{Proof of Theorem 2 (cont.)}
 		\begin{itemize}
 			\item Recall that  for $K$ with $u(K)=1$, we could obtain a link $K\cup c$ as in Baker-Motegi with $(0,0)$-surgery $S^3$ by sliding over a Hopf link according to the band presentation for $K$.
 			
@@ -691,9 +666,9 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 	\end{frame}
 
 \begin{frame}
-	\frametitle{Extension of theorem}
+	\frametitle{Extension of Theorem 2}
 	\begin{itemize}
-		\item How can we drop the condition on twisted Whitehead doubles? And on unknotting number?
+		\item How can we loosen the condition on twisted Whitehead doubles? And on unknotting number?
 		\item Can we produce an algorithm to find links $L = K \cup c$ from handle slides on a Hopf link?
 	\end{itemize}
 	\begin{conjecture}
