@@ -202,7 +202,7 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 	\begin{frame}	
 		\frametitle{Embedded s.c.c.'s on $T^2$}
 		\begin{definition}
-			A s.c.c $\gamma \subset T^2$ is called \textit{non-separating} if $T^2-\gamma$ is connected.
+			A s.c.c. $\gamma \subset T^2$ is called \textit{non-separating} if $T^2-\gamma$ is connected.
 		\end{definition}
 		\begin{itemize}
 		\item Every non-sperating s.c.c. in $T^2$ bounds a disc.
@@ -492,11 +492,26 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 \end{theorem}
 \end{frame}
 
+	\begin{frame}
+		\frametitle{Main theorem}
+		\begin{theorem}
+			If a knot $K$ has unknotting number $u(K)=1$ and is not a twisted Whitehead double, then $K$ has at most finitely many integer characterizing slopes.
+		\end{theorem}
+	\end{frame}
 
+	\begin{frame}
+		\frametitle{Proof of theorem}
+		\begin{proposition}
+			Let $K$ be a knot in $S^3$. Suppose we can take an unknot $c$ linked with $K$ so that $(0,0)$-surgery on $K\cup c$ yields $S^3$ and $c$ is not a meridian of $K$. Then $K$ has at most finitely many integer characterizing slopes.
+		\end{proposition}
+		\begin{itemize}
+			\item This is a strengthened form of a result proven by Baker-Motegi, which we proved using symmetry of surgical duality.
+		\end{itemize}
+	\end{frame}
 
 
 	\begin{frame}
-		\frametitle{Proof of Theorem 1 (cont.)}
+		\frametitle{Proof of theorem (cont.)}
 		\begin{itemize}
 			\item Recall that  for $K$ with $u(K)=1$, we could obtain a link $K\cup c$ as in Baker-Motegi with $(0,0)$-surgery $S^3$ by sliding over a Hopf link according to the band presentation for $K$.
 			
@@ -512,9 +527,9 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 	\end{frame}
 
 \begin{frame}
-	\frametitle{Extension of Theorem 1}
+	\frametitle{Extension of theorem}
 	\begin{itemize}
-		\item How can we drop the condition on Twisted Whitehead Doubles? And on unknotting number?
+		\item How can we drop the condition on twisted Whitehead doubles? And on unknotting number?
 		\item Can we produce an algorithm to find links $L = K \cup c$ from handle slides on a Hopf link?
 	\end{itemize}
 	\begin{conjecture}
