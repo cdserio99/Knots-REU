@@ -1,8 +1,8 @@
 \headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
 \headcommand {\beamer@framepages {1}{1}}
+\headcommand {\sectionentry {1}{Background}{2}{Background}{0}}
 \headcommand {\beamer@sectionpages {1}{1}}
 \headcommand {\beamer@subsectionpages {1}{1}}
-\headcommand {\sectionentry {1}{Background}{2}{Background}{0}}
 \headcommand {\slideentry {1}{0}{1}{2/2}{}{0}}
 \headcommand {\beamer@framepages {2}{2}}
 \headcommand {\slideentry {1}{0}{2}{3/3}{}{0}}
@@ -43,9 +43,9 @@
 \headcommand {\beamer@framepages {27}{27}}
 \headcommand {\slideentry {1}{0}{20}{28/28}{}{0}}
 \headcommand {\beamer@framepages {28}{28}}
+\headcommand {\sectionentry {2}{Goals and results: Producing knots with the same surgery}{29}{Goals and results: Producing knots with the same surgery}{0}}
 \headcommand {\beamer@sectionpages {2}{28}}
 \headcommand {\beamer@subsectionpages {2}{28}}
-\headcommand {\sectionentry {2}{Goals and results: Producing knots with the same surgery}{29}{Goals and results: Producing knots with the same surgery}{0}}
 \headcommand {\slideentry {2}{0}{1}{29/29}{}{0}}
 \headcommand {\beamer@framepages {29}{29}}
 \headcommand {\slideentry {2}{0}{2}{30/30}{}{0}}
@@ -74,9 +74,9 @@
 \headcommand {\beamer@framepages {42}{44}}
 \headcommand {\slideentry {2}{0}{14}{45/46}{}{0}}
 \headcommand {\beamer@framepages {45}{46}}
+\headcommand {\sectionentry {3}{Proof of Theorem 1}{47}{Proof of Theorem 1}{0}}
 \headcommand {\beamer@sectionpages {29}{46}}
 \headcommand {\beamer@subsectionpages {29}{46}}
-\headcommand {\sectionentry {3}{Proof of Theorem 1}{47}{Proof of Theorem 1}{0}}
 \headcommand {\slideentry {3}{0}{1}{47/47}{}{0}}
 \headcommand {\beamer@framepages {47}{47}}
 \headcommand {\slideentry {3}{0}{2}{48/52}{}{0}}
@@ -91,9 +91,9 @@
 \headcommand {\beamer@framepages {57}{64}}
 \headcommand {\slideentry {3}{0}{7}{65/65}{}{0}}
 \headcommand {\beamer@framepages {65}{65}}
+\headcommand {\sectionentry {4}{Proof of Theorem 2}{66}{Proof of Theorem 2}{0}}
 \headcommand {\beamer@sectionpages {47}{65}}
 \headcommand {\beamer@subsectionpages {47}{65}}
-\headcommand {\sectionentry {4}{Proof of Theorem 2}{66}{Proof of Theorem 2}{0}}
 \headcommand {\slideentry {4}{0}{1}{66/66}{}{0}}
 \headcommand {\beamer@framepages {66}{66}}
 \headcommand {\slideentry {4}{0}{2}{67/67}{}{0}}
@@ -110,4 +110,4 @@
 \headcommand {\beamer@subsectionpages {66}{71}}
 \headcommand {\beamer@sectionpages {66}{71}}
 \headcommand {\beamer@documentpages {71}}
-\headcommand {\gdef \inserttotalframenumber {48}}
+\headcommand {\def \inserttotalframenumber {48}}
