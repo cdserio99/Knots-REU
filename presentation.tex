@@ -52,8 +52,7 @@
 \title[Integer Characterizing Slopes]{Knot Surgery and Integer Characterizing Slopes}
 \usetheme{Madrid}
 
-\author[Agostini, Chen, Serio, Wang, Wu, and Wu\;\;\;]{Gabriel Agostini, Sophia Chen, Christian Serio, Cecilia Wang, Anton Wu, and Kexin Wu\\
-Advisors: Kyle Hayden and Aliakbar Daemi}
+\author[Agostini, Chen, Serio, Wang, Wu, and Wu\;\;\;]{Gabriel Agostini, Sophia Chen, Christian Serio,\\Cecilia Wang, Anton Wu, and Kexin Wu\\Advisors: Kyle Hayden and Aliakbar Daemi}
 \institute{Columbia University}
 \date{August 1, 2019}
 
@@ -234,25 +233,15 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 		\end{theorem}
 		
 	\end{frame}
-
-	
-
-	
-
-	
 	
 	\begin{frame}
 		\frametitle{Kirby calculus}
 		\begin{itemize}
 			\item Suppose that Dehn surgery on two surgery diagrams $D_1$, $D_2$ gives two $3$-manifolds $M_1$, $M_2$.
-			\pause
 			\item Then $M_1$ and $M_2$ are homeomorphic if and only if $D_1$ and $D_2$ are related by a sequence of \textit{Kirby moves}.
-			\pause
 			\begin{itemize}
 				\item Handle-slide
-				\pause
 				\item Rolfsen twist
-				\pause
 				\item Slam dunk
 			\end{itemize}
 		\end{itemize}
@@ -263,18 +252,28 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 		\begin{itemize}
 			\item The \textit{handle-slide} allows us to change the linking number between two link components.
 		\end{itemize}
-		\pause
 		\begin{figure}
 			\includegraphics[scale=0.09]{handleslide}
 		\end{figure}
 	\end{frame}
 	
 	\begin{frame}
+		\frametitle{Handle-slide}
+		\begin{itemize}
+			\item The \textit{handle-slide} allows us to change the linking number between two link components.
+		\end{itemize}
+		\vspace{3em}
+		\begin{figure}
+			\includegraphics[scale=1.25]{handleslide2}
+		\end{figure}
+		\vspace{2em}
+	\end{frame}
+	
+	\begin{frame}
 		\frametitle{Rolfsen twist}
 		\begin{itemize}
-			\item The \textit{Rolfsen twist} allows us to remove an $n$-framed unknot while $n$-twisting the strands passing through it.
+			\item The \textit{Rolfsen twist} allows us to remove a $(-1/n)$-framed unknot while $n$-twisting the strands passing through it.
 		\end{itemize}
-		\pause
 		\begin{figure}
 			\includegraphics[width=\textwidth]{rolfsentwist}
 		\end{figure}
@@ -285,7 +284,6 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 		\begin{itemize}
 			\item A $0$-framed link component $K$ with a $(-1/n)$-framed meridian is equivalent to $K$ with $n$-framing.
 		\end{itemize}
-		\pause
 		\begin{figure}
 			\includegraphics[width=\textwidth]{slamdunk}
 		\end{figure}
@@ -500,31 +498,27 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 	\begin{frame}
 		\frametitle{Known results on characterizing slopes}
 		\begin{itemize}
-		
-		\item The following theorem shows that for a most knot, most rational slopes are characterizing.
+			\item The following theorem shows that for most knots, most rational slopes are characterizing.
 		\end{itemize}
-		\pause
 		\begin{theorem}[McCoy, 2018]
 			If $K$ is a hyperbolic knot, then $K$ has only finitely many non-characterizing slopes $p/q$ with $|q|\geq 3$. Moreover, the probability that a randomly chosen slope $p/q$ is characterizing for $K$ approaches 1 as $|p|+|q|\to\infty$.
 		\end{theorem}
-	
-	\begin{itemize}
-		\item Moreover, it was proven by Ozsv\'{a}th and Szab\'{o} (2006) that all slopes are characterizing for the trefoil and figure-eight knot (twist knots).
-	\end{itemize}
+		\begin{itemize}
+			\item Moreover, it was proven by Ozsv\'{a}th and Szab\'{o} (2006) that all slopes are characterizing for the trefoil and figure-eight knot (twist knots).
+		\end{itemize}
 	\end{frame}
 	
 	\begin{frame}
 		\frametitle{Results (cont.)}
 		\begin{itemize}
-		\item However, the next theorem shows that for a certain type of knot, there are infinitely many non-characterizing slopes.
+			\item However, the next theorem shows that for a certain type of knot, there are infinitely many non-characterizing slopes.
 		\end{itemize}
-		\pause
 		\begin{theorem}[Baker--Motegi, 2018]
 			Let $K\subset S^3$ be a knot, where there is an unknot $c$ which is not a meridian to $K$ such that $(0,\hs0)$-surgery on $K\cup c$ yields $S^3$. Then $K$ has infinitely many non-characterizing slopes.
 		\end{theorem}
-		\pause
 		\begin{itemize}
-		\item Our work shows that for knots satisfying reasonable conditions, most integer slopes are non-characterizing!
+			\item Baker and Motegi ask: do any small knots have infinitely many non-characterizing slopes?
+			\item Our work shows that for knots satisfying certain conditions, almost all \textit{integer} slopes are non-characterizing!
 		\end{itemize}
 	\end{frame}
 	
@@ -539,7 +533,6 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 				\item If $K$ is one of the $u(K) = 2$ knots $8_3$, $10_{125}$, or $10_{126}$, $K$ has at most \textit{one} integer characterizing slope.
 			\end{itemize}
 		\end{theorem1}
-		\pause
 		\begin{theorem2}
 			If a knot $K$ has unknotting number $u(K)=1$ and is not a twisted Whitehead double, then $K$ has at most finitely many integer characterizing slopes.
 		\end{theorem2}
@@ -551,13 +544,9 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 		\frametitle{Hyperbolic Dehn surgery}
 		\begin{itemize}
 			\item A \textit{hyperbolic $3$-manifold} is a compact, orientable $3$-manifold which admits a complete hyperbolic metric; that is, a Riemannian metric with constant negative sectional curvature.
-			\pause
 			\item Hyperbolic $3$-manifolds, being compact, have finite hyperbolic volume.
-			\pause
 			\item A knot $K\subset S^3$ is a \textit{hyperbolic knot} if $S^3\setminus N(K)$ is a hyperbolic $3$-manifold.
-			\pause
 			\item If $K$ is a hyperbolic knot, then the torus $\partial N(K)$ inherits a Euclidean metric.
-			\pause
 			\item According to this Euclidean metric, the \textit{length} $\ell(p/q)$ of a slope $p/q$ is the length of the shortest curve on the torus $\partial N(K)$ with slope $p/q$.
 		\end{itemize}
 	\end{frame}
@@ -567,7 +556,6 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 		\begin{theorem}[Gromov-Thurston]
 			Let $K$ be a hyperbolic knot. If $\ell(p/q)>2\pi$, then the $(p/q)$-filling on $S^3\setminus N(K)$ is hyperbolic.
 		\end{theorem}
-		\pause
 		\begin{theorem}[Futer, et al.]
 			Let $K$ be a hyperbolic knot; let $X\defeq S^3\setminus N(K)$. If $\ell(p/q)>2\pi$, then the volume $\vol(X_{p/q})$ of the $(p/q)$-filling on $X$ satisfies
 			\[\vol(X_{p/q})\ge\left(1-\left(\frac{2\pi}{\ell(p/q)}\right)^2\,\right)^{3/2}\vol(X).\]
@@ -600,20 +588,13 @@ Advisors: Kyle Hayden and Aliakbar Daemi}
 		\frametitle{Proof of Theorem 1 (cont.)}
 		\begin{itemize}
 			\item Following Baker--Motegi, we can produce a link $(K\cup c)\subset S^3$, where $c$ is an unknot which is not a meridian to $K$ such that $(0,\hs0)$-surgery on $K\cup c$ yields $S^3$.
-			\pause
 			\item Add a meridian $m$ to $c$; notice that $m$ \textit{is} $K_n'$, in the non-standard representation of $S^3$.
-			\pause
 			\item Hence removing a neighborhood of $m$ and performing $0$-surgery on $c$ gives a hyperbolic manifold $X$ on which $n$-filling yields $S^3\setminus K_n'$.
-			\pause
 			\item Define $v\defeq\vol(S^3\setminus K)$, $v_n'\defeq\vol(S^3\setminus K_n')$ and $v_X\defeq\vol(X)$.
-			\pause
 			\item Now we use the above bounds to show that:
-			\pause
 			$$v_n'\ge\left(1-\left(\frac{2\pi\ell}{|n|\hs\sqrt{3}}\right)^2\,\right)^{3/2}v_X>v$$
 			for $|n|>N\defeq\frac{2\pi}{\sqrt{3}}\,\ell\,(1-\left(v/v_X)^{2/3}\right)^{-1/2}$.
-			\pause
 			\item Hence all integer slopes $|n|>N$ are non-characterizing.
-			\pause
 			\item Finally, we check the finitely many remaining cases by computer.
 		\end{itemize}
 	\end{frame}
